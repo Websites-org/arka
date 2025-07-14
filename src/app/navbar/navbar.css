@@ -28,7 +28,7 @@
 
     .nav-links {
       display: flex;
-      gap: 32px;
+      gap: 64px;
 
       a {
         text-decoration: none;
@@ -46,7 +46,7 @@
 
     .social-icons {
       display: flex;
-      gap: 1rem;
+      gap: 2rem;
 
       a {
         color: black;

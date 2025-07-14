@@ -1,5 +1,16 @@
+.home-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #fff 19.56%, #ffe9d4 100%);
+  z-index: -1;
+}
+
 .home-container {
   background: linear-gradient(180deg, #fff 19.56%, #ffe9d4 100%);
+  min-height: 100vh; /* or 100% if inside a scrollable wrapper */
+  position: relative; /* required if child elements are absolutely positioned */
+  z-index: 0;
 }
 .banner {
   background: #54b6c3;
@@ -7,7 +18,7 @@
   overflow: hidden;
   padding: 0;
   color: white;
-  min-height: 80vh;
+  min-height: 90vh;
   display: flex;
   align-items: flex-end;
 }
@@ -47,6 +58,8 @@
 .banner-content .left-banner {
   flex: 2;
   max-width: 800px;
+  position: relative;
+  left: 41px;
 }
 
 .banner-content .left-banner h1 {
@@ -116,6 +129,7 @@
   object-fit: contain;
   margin-bottom: -269px;
   z-index: -1;
+  margin-right: 41px;
 }
 .banner .rocket {
   position: absolute;
@@ -127,10 +141,11 @@
 }
 .about-arka {
   position: relative;
-  background: #fff;
+  /* background: #fff; */
   padding: 5rem 1rem;
   text-align: center;
   overflow: hidden;
+  height: 70vh;
 }
 
 .about-text {
@@ -138,6 +153,11 @@
   margin: auto;
   position: relative;
   z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
 }
 
 .about-text h2 {
@@ -149,9 +169,6 @@
   line-height: 100%; /* 40px */
 }
 
-.about-text span {
-  font-size: 2.3rem;
-}
 
 .about-text p {
   margin: 1rem 0 2rem;
@@ -160,7 +177,7 @@
   font-family: "Nunito Sans";
   font-size: 18px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 28px; /* 116.667% */
 }
 
@@ -627,6 +644,9 @@ h2 {
   font-weight: 700;
   line-height: 100%; /* 40px */
   margin-right: 0.5rem;
+  position: relative;
+  top: -29px;
+
 }
 
 .mv-title {
@@ -687,7 +707,6 @@ ul {
   padding: 4rem 6rem;
   align-items: flex-start;
   background: none;
-
 }
 
 .edu-intro {
@@ -695,7 +714,7 @@ ul {
 }
 
 .edu-intro h2 {
-  color: #DA251C;
+  color: #da251c;
   font-family: "Golos Text";
   font-size: 40px;
   font-style: normal;
@@ -708,7 +727,12 @@ ul {
 }
 
 .edu-intro p {
-  font-size: 1rem;
+  color: #000;
+  font-family: "Nunito Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px; /* 130% */
   color: #444;
   margin-top: 1rem;
 }
@@ -727,11 +751,10 @@ ul {
   border-radius: 20px;
   cursor: pointer;
   transition: flex 0.5s ease;
-  
 }
-.edu-card.active{
+.edu-card.active {
   border-radius: 12px 12px 60px 12px;
-  background: linear-gradient(180deg, #FFF 0%, #00457C 117.5%);
+  background: linear-gradient(180deg, #fff 0%, #00457c 117.5%);
 }
 
 .edu-card:not(.active) {
@@ -740,7 +763,7 @@ ul {
 
 .edu-card {
   width: 120px;
-height: 350px;
+  height: 350px;
   position: relative;
   border-radius: 20px;
   overflow: hidden;
@@ -776,7 +799,7 @@ height: 350px;
   left: 20px;
   z-index: 3;
   color: white;
-  font-family: 'Golos Text', sans-serif;
+  font-family: "Golos Text", sans-serif;
   font-size: 20px;
   font-weight: 800;
   letter-spacing: 0.3px;
@@ -886,7 +909,7 @@ height: 350px;
 }
 
 .opened-content h3 {
-  color: #FFF;
+  color: #fff;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-family: "Golos Text";
   font-size: 20px;
@@ -899,13 +922,13 @@ height: 350px;
 
 .opened-content p {
   margin-bottom: 0.75rem;
-  color: #FFF;
-text-align: center;
-font-family: "Nunito Sans";
-font-size: 12px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
+  color: #fff;
+  text-align: center;
+  font-family: "Nunito Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
 @keyframes fadeIn {
@@ -928,7 +951,6 @@ line-height: normal;
   border-radius: 20px;
   transition: all 0.3s ease;
   z-index: 3;
-
 }
 
 .edu-card h3 {
@@ -951,11 +973,20 @@ line-height: normal;
   font-size: 0.85rem;
 }
 
-
-.mobile-accordion{
+.mobile-accordion {
   display: none;
 }
 
+.curriculum-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 4rem;
+}
+.mv-section ul{
+  text-align: left;
+}
 
 @media (max-width: 1300px) {
   .banner {
@@ -968,12 +999,16 @@ line-height: normal;
   .banner-content {
     flex-direction: column;
     align-items: center;
-    padding: 3rem 1rem;
+    padding: 3rem 1.5rem;
     margin: 0;
   }
 
+  .banner-content .left-banner {
+    left: 0;
+    padding: 2rem;
+  }
   .banner-content .left h1 {
-    font-size: 2.2rem;
+    font-size: 30px;
   }
 
   .banner-content .right {
@@ -992,13 +1027,14 @@ line-height: normal;
     /* bottom: -10px; */
     bottom: -16%;
   }
-  .banner-content .right img {
+  .banner-content .right-banner img {
     width: 100%;
-    max-width: 200px;
-    height: auto;
+    max-width: 484px;
+    height: 520px;
     object-fit: contain;
+    margin-bottom: -176px;
     z-index: -1;
-    margin-bottom: -22%;
+    margin-right: 0px;
   }
   .edu-card {
     width: 180px;
@@ -1023,7 +1059,9 @@ line-height: normal;
     font-size: 24px;
   }
 
-  ul, .vision-content, .read-more {
+  ul,
+  .vision-content,
+  .read-more {
     font-size: 18px;
     line-height: 22px;
   }
@@ -1032,8 +1070,6 @@ line-height: normal;
     width: 200px;
   }
 }
-
-
 
 @media (max-width: 800px) {
   .banner {
@@ -1047,7 +1083,7 @@ line-height: normal;
     flex-direction: column;
     gap: 1rem;
   }
-  
+
   .accordion-card-mobile {
     background: #142b65;
     border-radius: 16px;
@@ -1056,7 +1092,7 @@ line-height: normal;
     transition: all 0.3s ease;
     width: 100%;
   }
-  
+
   .accordion-header-mobile {
     display: flex;
     justify-content: space-between;
@@ -1066,13 +1102,13 @@ line-height: normal;
     font-family: "Golos Text", sans-serif;
     font-size: 1rem;
   }
-  
+
   .color-strip {
     height: 5px;
     width: 100%;
     background: #ffe200;
   }
-  
+
   .accordion-body-mobile {
     display: flex;
     gap: 1rem;
@@ -1080,29 +1116,29 @@ line-height: normal;
     background: #142b65;
     align-items: center;
   }
-  
+
   .body-image {
     width: 35%;
     border-radius: 8px;
     object-fit: cover;
   }
-  
+
   .body-content {
     width: 60%;
   }
-  
+
   .body-content p {
     font-size: 0.9rem;
     line-height: 1.4;
     margin: 0 0 0.5rem 0;
   }
-  
+
   .section-label {
     font-size: 0.8rem;
     font-weight: 700;
     text-transform: uppercase;
   }
-  
+
   .icon i.arrow {
     border: solid white;
     border-width: 0 2px 2px 0;
@@ -1111,15 +1147,15 @@ line-height: normal;
     transform: rotate(45deg);
     transition: 0.3s ease;
   }
-  
+
   .icon i.up {
     transform: rotate(-135deg);
   }
-  
+
   .icon i.down {
     transform: rotate(45deg);
   }
-  .edu-card{
+  .edu-card {
     display: none;
   }
 }
@@ -1162,7 +1198,7 @@ line-height: normal;
   }
 
   .about-text p {
-    font-size: 1rem;
+    font-size: 16px;
   }
 
   .left-curve.top,
@@ -1176,13 +1212,18 @@ line-height: normal;
   .card-container {
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    padding: 0;
+  }
+  .curriculum-container{
+    padding: 1rem;
   }
 
   .flip-card {
     width: 90%;
     font-size: 40px;
   }
-  .flip-front h3{
+  .flip-front h3 {
     font-size: 28px;
   }
   .school-name {
@@ -1235,6 +1276,7 @@ line-height: normal;
 
   .mv-our {
     font-size: 20px;
+    top: 0px;
   }
 
   ul {
@@ -1244,12 +1286,11 @@ line-height: normal;
   .read-more {
     justify-content: center;
   }
-  .puzzle-red{
+  .puzzle-red {
     bottom: 48px;
     left: 34px;
-
   }
-  .puzzle-blue{
+  .puzzle-blue {
     top: 23px;
     right: 47px;
   }
@@ -1267,19 +1308,17 @@ line-height: normal;
   }
 
   .edu-card {
-  scroll-snap-align: start;
-  flex-shrink: 0;
-  min-width: 280px;
-  max-width: 90vw;
-  height: auto;
-}
-
-  
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    min-width: 280px;
+    max-width: 90vw;
+    height: auto;
+  }
 }
 
 @media (max-width: 500px) {
   .banner .clouds {
-    bottom: -8%;
+    bottom: -4%;
   }
   .edu-cards {
     flex-direction: column;

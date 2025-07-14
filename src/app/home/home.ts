@@ -149,4 +149,23 @@ export class Home {
       description:'Here, students prepare for the future with structured academics, self-discipline, and life skills. Through regular assessments and leadership exposure, they develop clarity, confidence, and readiness for the next step.'
     }
   ];
+  showAll = false;
+
+  missionPoints: string[] = [
+    'To provide a complete holistic education for the all-round development of the student with positive attitude.',
+    'To encourage students to excel in their respective potential fields.',
+    'To bring out the best in every child and create awareness to make them competitive in the society.',
+    'Nurturing and moulding students for empowerment.',
+    'Inculcate leadership skills, develop lateral thinking and trigger creativity.',
+    'Facilitate the development of every child into a socially responsible citizen.'
+  ];
+
+  getVisiblePoints(): string[] {
+    return this.showAll ? this.missionPoints : this.missionPoints.slice(0, 2);
+  }
+
+  toggleReadMore(event: Event): void {
+    event.preventDefault(); // prevent page jump from anchor tag
+    this.showAll = !this.showAll;
+  }
 }

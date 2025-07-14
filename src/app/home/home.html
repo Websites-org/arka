@@ -5,44 +5,45 @@
     <img src="/cloud.svg" alt="Clouds" class="clouds" />
     <img src="/rocket.png" alt="rocket" class="rocket" />
 
-  
+
     <div class="banner-content">
       <div class="left-banner">
         <h1>Arka International School</h1>
         <p>
-          A place where education meets curiosity, confidence and care.
-          From pre-primary to secondary, we help every child grow with
-          strong values, joyful learning, and hands-on activities led by caring teachers.
+          A place where education meets curiosity, confidence and care.<br />
+          From pre-primary to secondary, we help every child grow<br /> with
+          strong values, joyful learning, and hands-on<br /> activities led by caring teachers.
         </p>
         <div class="cta-buttons">
           <button class="explore">Explore Now</button>
           <button class="contact" [routerLink]="'/contact'">Contact Us</button>
         </div>
       </div>
-  
+
       <div class="right-banner">
         <img src="school-girl.svg" alt="Student" />
       </div>
     </div>
   </div>
-  
+
   <section class="about-arka">
     <div class="image-arc">
       <!-- Left arc images -->
       <img src="1.png" class="arc-img left-curve top" alt="Kids 1">
       <img src="2.png" class="arc-img left-curve mid" alt="Kids 2">
       <img src="3.png" class="arc-img left-curve bottom" alt="Kids 3">
-  
+
       <!-- Right arc images -->
       <img src="4.png" class="arc-img right-curve top" alt="Kids 4">
       <img src="5.png" class="arc-img right-curve mid" alt="Kids 5">
       <img src="6.png" class="arc-img right-curve bottom" alt="Kids 6">
     </div>
-  
+
     <div class="about-text">
       <h2>ABOUT ARKA INTERNATIONAL SCHOOL</h2>
       <p>
-        Jnanambika Educational Trust is founded by Dr. Venugopal in 2018. The Trust has a vision to drive Arka International School, to nurture young minds, retain their creative talents and at the same time ...
+        Jnanambika Educational Trust is founded by Dr. Venugopal in 2018. The Trust has a vision to drive Arka
+        International School, to nurture young minds, retain their creative talents and at the same time ...
       </p>
       <a href="#" class="learn-more">Learn More</a>
     </div>
@@ -52,56 +53,47 @@
     <div class="edu-intro">
       <h2>Empowering Young Minds,Every Step of the Way</h2>
       <p>
-        We believe that education is more than just academics - it's about helping every child grow with confidence, creativity and care. From their very first day in pre-primary to their final years in secondary, students at Arka experience joyful learning, meaningful classroom connections and the guidance of experienced teachers who truly care.
+        We believe that education is more than just academics - it's about helping every child grow with confidence,
+        creativity and care. From their very first day in pre-primary to their final years in secondary, students at
+        Arka experience joyful learning, meaningful classroom connections and the guidance of experienced
+        teachers who truly care.
       </p>
     </div>
-  
+
     <!-- Accordion Cards -->
     <div class="edu-accordion">
-      <div
-        class="edu-card"
-        *ngFor="let stage of stages; let i = index"
-        [class.active]="i === activeIndex"
-        (click)="setActiveCard(i)"
-        [ngStyle]="{ '--card-color': stage.color }"
-      >
-      <ng-container *ngIf="i === activeIndex; else closedCard">
-        <div class="color-bar"></div>
-        <img [src]="stage.image" class="opened-image" />
-        <div class="opened-content">
-          <h3>{{ stage.title }}</h3>
-          <p>{{ stage.description }}</p>
-          <button class="know-more">Know More</button>
-        </div>
-      </ng-container>
-      <ng-template #closedCard>
-        <div
-          class="card-background"
-          [ngStyle]="{
-            'background-image':
-              'linear-gradient(180deg, rgba(255,255,255,0.8) 0%, rgba(0,68,124,0.8) 100%), url(' + stage.image + ')'
-          }"
-        >
+      <div class="edu-card" *ngFor="let stage of stages; let i = index" [class.active]="i === activeIndex"
+        (click)="setActiveCard(i)" [ngStyle]="{ '--card-color': stage.color }">
+        <ng-container *ngIf="i === activeIndex; else closedCard">
           <div class="color-bar"></div>
-          <div class="card-bottom">
+          <img [src]="stage.image" class="opened-image" />
+          <div class="opened-content">
             <h3>{{ stage.title }}</h3>
+            <p>{{ stage.description }}</p>
             <button class="know-more">Know More</button>
           </div>
-        </div>
-      </ng-template>
+        </ng-container>
+        <ng-template #closedCard>
+          <div class="card-background" [ngStyle]="{
+            'background-image':
+              'linear-gradient(180deg, rgba(255,255,255,0.8) 0%, rgba(0,68,124,0.8) 100%), url(' + stage.image + ')'
+          }">
+            <div class="color-bar"></div>
+            <div class="card-bottom">
+              <h3>{{ stage.title }}</h3>
+              <button class="know-more">Know More</button>
+            </div>
+          </div>
+        </ng-template>
       </div>
       <div class="mobile-accordion">
-        <div
-          class="accordion-card-mobile"
-          *ngFor="let stage of stages; let i = index"
-          [class.open]="activeIndex === i"
-        >
+        <div class="accordion-card-mobile" *ngFor="let stage of stages; let i = index" [class.open]="activeIndex === i">
           <div class="accordion-header-mobile" (click)="setActiveCard(i)">
             <span class="title">{{ stage.title }}</span>
           </div>
-      
+
           <div class="color-strip" [style.background]="stage.color"></div>
-      
+
           <div class="accordion-body-mobile" *ngIf="activeIndex === i">
             <img [src]="stage.bgImage" alt="image" class="body-image" />
             <div class="body-content">
@@ -111,7 +103,7 @@
           </div>
         </div>
       </div>
-      
+
     </div>
   </div>
 
@@ -123,18 +115,23 @@
         <sub class="mv-title blue">Mission</sub>
       </h2>
       <ul>
-        <li>To provide a complete holistic education for the all-round development of the student with positive attitude.</li>
-        <li>To encourage students to excel in their respective potential fields</li>
+        <li *ngFor="let point of getVisiblePoints(); let i = index">
+          {{ point }}
+        </li>
       </ul>
-      <a href="#" class="read-more">Read More...</a>
+      
+      <a href="#" class="read-more" (click)="toggleReadMore($event)">
+        {{ showAll ? 'Read Less...' : 'Read More...' }}
+      </a>
+      
     </div>
-  
+
     <!-- Center Icons -->
     <div class="mv-icons">
       <img src="vision.png" class="puzzle puzzle-blue" alt="Bulb Puzzle" />
       <img src="mission.png" class="puzzle puzzle-red" alt="Target Puzzle" />
     </div>
-  
+
     <!-- Right: Vision -->
     <div class="mv-section right">
       <h2>
@@ -147,23 +144,27 @@
       </p>
     </div>
   </div>
-  
-  <div class="card-container">
-    <div class="flip-card" *ngFor="let card of card">
-      <div class="flip-inner">
-        <!-- Front: Blue Text Side -->
-        <div class="flip-front">
-          <div class="icon-box">
-            <img [src]="card.icon" alt="Icon" />
+  <div class="curriculum-container">
+    <div class="about-text">
+      <h2>CO-CURRICULUM</h2>
+    </div>
+    <div class="card-container">
+      <div class="flip-card" *ngFor="let card of card">
+        <div class="flip-inner">
+          <!-- Front: Blue Text Side -->
+          <div class="flip-front" [ngStyle]="{'background-color': card.color}">
+            <div class="icon-box">
+              <img [src]="card.icon" alt="Icon" />
+            </div>
+            <h3>{{ card.title }}</h3>
+            <p>{{ card.description }}</p>
           </div>
-          <h3>{{ card.title }}</h3>
-          <p>{{ card.description }}</p>
-        </div>
-  
-        <!-- Back: Image Side -->
-        <div class="flip-back" [ngStyle]="{'background-image': 'url(' + card.image + ')'}">
-          <div class="back-label" [ngStyle]="{'background-color': card.color}">
-            {{ card.label }}
+
+          <!-- Back: Image Side -->
+          <div class="flip-back" [ngStyle]="{'background-image': 'url(' + card.image + ')'}">
+            <div class="back-label" [ngStyle]="{'background-color': card.color}">
+              {{ card.label }}
+            </div>
           </div>
         </div>
       </div>
@@ -176,13 +177,15 @@
       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s
       standard dummy text ever since Lorem Ipsum is simply dummy text.
     </p>
-  
+
     <div class="accordion">
       <div class="accordion-item" *ngFor="let faq of faqs; let i = index">
         <div class="accordion-header" (click)="toggle(i)">
           <span>{{ i + 1 }}. {{ faq.question }}</span>
-          <svg [class.rotate]="faq.open" class="arrow" xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
-            <path d="M21.9497 12.05L12.0502 21.9495M21.9497 12.05V20.5353M21.9497 12.05H13.4645" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <svg [class.rotate]="faq.open" class="arrow" xmlns="http://www.w3.org/2000/svg" width="34" height="34"
+            viewBox="0 0 34 34" fill="none">
+            <path d="M21.9497 12.05L12.0502 21.9495M21.9497 12.05V20.5353M21.9497 12.05H13.4645" stroke="black"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </div>
         <div class="accordion-body-wrapper" [ngClass]="{ open: faq.open }">
@@ -193,10 +196,6 @@
       </div>
     </div>
   </div>
-  
-  
+
+
 </div>
-  
-  
-  
-  
