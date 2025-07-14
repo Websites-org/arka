@@ -1166,6 +1166,9 @@ ul {
     align-items: center;
     text-align: center;
   }
+  .about-arka{
+    height: 60vh;
+  }
 
   .about-images {
     flex-direction: row;
