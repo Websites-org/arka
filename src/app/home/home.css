@@ -1,0 +1,1315 @@
+.home-container {
+  background: linear-gradient(180deg, #fff 19.56%, #ffe9d4 100%);
+}
+.banner {
+  background: #54b6c3;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  color: white;
+  min-height: 80vh;
+  display: flex;
+  align-items: flex-end;
+}
+
+.banner .sun {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 120px;
+  z-index: 2;
+}
+
+.banner .clouds {
+  position: absolute;
+  bottom: -20%;
+  left: -36px;
+  width: 120%;
+  z-index: 3;
+  overflow: hidden;
+}
+
+.banner-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  /* max-width: 1200px; */
+  margin: 0 4rem;
+  padding: 0rem 2rem;
+  z-index: 2;
+  position: relative;
+  padding-bottom: 17rem;
+  text-align: center;
+  gap: 20px;
+}
+
+.banner-content .left-banner {
+  flex: 2;
+  max-width: 800px;
+}
+
+.banner-content .left-banner h1 {
+  color: #fff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Golos Text";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 64px */
+  margin-bottom: 1.5rem;
+}
+
+.banner-content .left-banner p {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Nunito Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 120% */
+  margin-bottom: 1.5rem;
+}
+
+.banner-content .cta-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-content .cta-buttons .explore {
+  background: transparent;
+  border: 2px solid #ffc107;
+  color: #ffc107;
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.banner-content .cta-buttons .contact {
+  background: #fff;
+  color: #f44336;
+  padding: 0.6rem 1.4rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.banner-content .right-banner {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  z-index: 2;
+}
+
+.banner-content .right-banner img {
+  width: 100%;
+  max-width: 484px;
+  height: 520px;
+  object-fit: contain;
+  margin-bottom: -269px;
+  z-index: -1;
+}
+.banner .rocket {
+  position: absolute;
+  bottom: 190px;
+  left: 40px;
+  width: 90px;
+  z-index: 2; /* Behind clouds but in front of background */
+  opacity: 0.8;
+}
+.about-arka {
+  position: relative;
+  background: #fff;
+  padding: 5rem 1rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.about-text {
+  max-width: 800px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.about-text h2 {
+  color: #0061af;
+  font-family: "Golos Text";
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 40px */
+}
+
+.about-text span {
+  font-size: 2.3rem;
+}
+
+.about-text p {
+  margin: 1rem 0 2rem;
+  color: #000;
+  text-align: center;
+  font-family: "Nunito Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 116.667% */
+}
+
+.learn-more {
+  text-decoration: none;
+  color: #0061af;
+  text-align: center;
+  font-family: "Nunito Sans";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px; /* 116.667% */
+  border-bottom: 2px solid red;
+  padding-bottom: 2px;
+}
+
+/* Arc container */
+.image-arc {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Base image style */
+.arc-img {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.4s ease;
+  /* box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15); */
+}
+
+/* Left side curve */
+.left-curve.top {
+  top: 10%;
+  left: 7%;
+  transform: rotate(-20deg) translateY(-10px);
+}
+.left-curve.mid {
+  top: 35%;
+  left: 13%;
+  transform: rotate(-8deg) translateY(0);
+}
+.left-curve.bottom {
+  top: 65%;
+  left: 7%;
+  transform: rotate(12deg) translateY(10px);
+}
+
+/* Right side curve */
+.right-curve.top {
+  top: 10%;
+  right: 7%;
+  transform: rotate(20deg) translateY(-10px);
+}
+.right-curve.mid {
+  top: 35%;
+  right: 13%;
+  transform: rotate(8deg) translateY(0);
+}
+.right-curve.bottom {
+  top: 65%;
+  right: 7%;
+  transform: rotate(-12deg) translateY(10px);
+}
+
+/* Hover effect */
+.arc-img:hover {
+  transform: scale(1.05) rotate(0deg);
+}
+.learning-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.learning-text {
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+
+.learning-text h2 {
+  color: #e31c25;
+  font-size: 24px;
+  margin-bottom: 1rem;
+}
+
+.learning-text h2 span {
+  display: block;
+  color: #000;
+}
+
+.learning-text p {
+  color: #333;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.learning-cards {
+  display: flex;
+  gap: 1rem;
+  flex: 2 1 600px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  width: 180px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.card-content {
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+  color: white;
+  background: linear-gradient(to top, var(--color), transparent);
+  width: 100%;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+
+.card h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card p {
+  font-size: 14px;
+  margin: 0.5rem 0;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #fff;
+  background: #000;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+/* Active card expands */
+.card.active,
+.card:hover {
+  width: 240px;
+  height: 340px;
+  z-index: 1;
+}
+
+.card.active img,
+.card:hover img {
+  opacity: 0.4;
+}
+
+.card.active .card-content,
+.card:hover .card-content {
+  transform: translateY(0);
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.flip-card {
+  background: transparent;
+  width: 350px;
+  height: 400px;
+  perspective: 1000px;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front face */
+.flip-front,
+.flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  backface-visibility: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Blue front card */
+.flip-front {
+  background-color: #0d91d1;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-box img {
+  width: 100px;
+  height: 120px;
+  margin-bottom: 1rem;
+}
+
+.flip-front h3 {
+  color: #fff;
+  font-family: "Nunito Sans";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin-bottom: 0.5rem;
+}
+
+.flip-front p {
+  color: #fff;
+  text-align: center;
+  font-family: "Nunito Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px; /* 122.222% */
+}
+
+/* Back face with image */
+.flip-back {
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.back-label {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  text-align: center;
+  padding: 1rem;
+  color: #fff;
+  font-family: "Nunito Sans";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+.faq-wrapper {
+  padding: 3rem 1rem;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  color: #1b1b1b;
+  font-family: "Nunito Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+
+.school-name {
+  color: #da251c;
+  font-family: "Golos Text";
+  font-size: 46px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 46px */
+  margin: 0.5rem 0 1rem;
+}
+
+.description {
+  max-width: 700px;
+  margin: auto;
+  color: #000;
+  text-align: center;
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px; /* 162.5% */
+}
+
+.accordion {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: 1s;
+}
+
+.accordion-item {
+  border-radius: 8px;
+  border: 1px solid #db9a45;
+  background: #ffe4c8;
+  padding: 1rem;
+  text-align: left;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #000;
+  font-family: Kanit;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+}
+
+.accordion-body {
+  padding-top: 0.75rem;
+  color: #000;
+  font-family: "Nunito Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.arrow {
+  background: #ffffff;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 2s ease-in-out;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.arrow.rotate {
+  transform: rotate(99deg); /* ↗ */
+}
+.accordion-body-wrapper {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 1s ease;
+  transition-delay: 3s;
+}
+
+.accordion-body-wrapper.open {
+  max-height: 500px;
+  margin-top: 10px;
+  opacity: 1;
+  transform: translateY(0);
+}
+.mv-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 2rem 6rem;
+  gap: 2rem;
+  height: 70vh;
+}
+
+.mv-section {
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  height: 70vh;
+}
+
+.mv-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.puzzle-container {
+  position: relative;
+  width: 180px; /* adjust as needed */
+  height: 180px;
+  margin: auto;
+}
+
+.puzzle {
+  position: relative;
+  width: 270px;
+  height: auto;
+}
+
+.puzzle-blue {
+  top: 48px;
+  right: -27px;
+  z-index: 2;
+}
+
+.puzzle-red {
+  bottom: 105px;
+  left: -112px;
+  z-index: 1;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.mv-our {
+  color: #0061af;
+  font-family: "Golos Text";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 40px */
+  margin-right: 0.5rem;
+}
+
+.mv-title {
+  color: #0061af;
+  font-family: "Golos Text";
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 80px */
+}
+
+.blue {
+  color: #0077c8;
+}
+
+.red {
+  color: #d62828;
+}
+
+ul {
+  margin-bottom: 0.5rem;
+  padding-left: 1.2rem;
+  color: #000;
+  font-family: "Nunito Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 120% */
+}
+
+.read-more {
+  color: #000;
+  font-family: "Nunito Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 120% */
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+  text-align: right;
+  text-decoration: none;
+}
+
+.vision-content {
+  color: #000;
+  text-align: center;
+  font-family: "Nunito Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 120% */
+}
+.edu-accordion-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 4rem 6rem;
+  align-items: flex-start;
+  background: none;
+
+}
+
+.edu-intro {
+  flex: 1 1 15%;
+}
+
+.edu-intro h2 {
+  color: #DA251C;
+  font-family: "Golos Text";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.edu-intro .highlight {
+  color: #d62828;
+}
+
+.edu-intro p {
+  font-size: 1rem;
+  color: #444;
+  margin-top: 1rem;
+}
+
+.edu-accordion {
+  flex: 1 1 30%;
+  display: flex;
+  gap: 1rem;
+}
+
+.edu-card {
+  flex: 1;
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: flex 0.5s ease;
+  
+}
+.edu-card.active{
+  border-radius: 12px 12px 60px 12px;
+  background: linear-gradient(180deg, #FFF 0%, #00457C 117.5%);
+}
+
+.edu-card:not(.active) {
+  flex: 0.6;
+}
+
+.edu-card {
+  width: 120px;
+height: 350px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 20px;
+  z-index: 1;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-top-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10px;
+  width: 100%;
+  background-color: var(--card-color, #ffe200);
+  z-index: 2;
+}
+
+.card-title {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  z-index: 3;
+  color: white;
+  font-family: 'Golos Text', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card-expand {
+  position: absolute;
+  bottom: 0;
+  z-index: 4;
+  padding: 1rem;
+  background: white;
+  color: #222;
+  width: 100%;
+  text-align: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.card-expand p {
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.know-more {
+  background: #d62828;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 0.85rem;
+}
+.edu-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.edu-card {
+  width: 200px;
+  min-height: 450px;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+/* ================= CLOSED STATE ================= */
+
+.card-background {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.color-bar {
+  height: 10px;
+  background-color: var(--card-color, #ffe200);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.card-bottom {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 2;
+  color: #fff;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.card-bottom h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.know-more {
+  background-color: #d62828;
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+/* ================= OPENED STATE ================= */
+
+.opened-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  /* border-top-left-radius: 20px;
+  border-top-right-radius: 20px; */
+}
+
+.opened-content {
+  padding: 1rem;
+  text-align: center;
+}
+
+.opened-content h3 {
+  color: #FFF;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Golos Text";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  margin-bottom: 0.5rem;
+}
+
+.opened-content p {
+  margin-bottom: 0.75rem;
+  color: #FFF;
+text-align: center;
+font-family: "Nunito Sans";
+font-size: 12px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.edu-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  color: white;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  z-index: 3;
+
+}
+
+.edu-card h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.edu-card p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.know-more {
+  background: #d62828;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: white;
+  border-radius: 30px;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+}
+
+
+.mobile-accordion{
+  display: none;
+}
+
+
+@media (max-width: 1300px) {
+  .banner {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    margin: 0;
+  }
+
+  .banner-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1rem;
+    margin: 0;
+  }
+
+  .banner-content .left h1 {
+    font-size: 2.2rem;
+  }
+
+  .banner-content .right {
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .banner .sun {
+    top: 60%;
+    right: 10px;
+    width: 70px;
+  }
+
+  .banner .clouds {
+    width: 150%;
+    /* bottom: -10px; */
+    bottom: -16%;
+  }
+  .banner-content .right img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    object-fit: contain;
+    z-index: -1;
+    margin-bottom: -22%;
+  }
+  .edu-card {
+    width: 180px;
+  }
+}
+@media (max-width: 1024px) {
+  .mv-wrapper {
+    padding: 2rem 2rem;
+    height: auto;
+    gap: 2rem;
+  }
+
+  .mv-section {
+    max-width: 100%;
+  }
+
+  .mv-title {
+    font-size: 48px;
+  }
+
+  .mv-our {
+    font-size: 24px;
+  }
+
+  ul, .vision-content, .read-more {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .puzzle {
+    width: 200px;
+  }
+}
+
+
+
+@media (max-width: 800px) {
+  .banner {
+    margin-top: 80px;
+  }
+  .banner .rocket {
+    top: 5px;
+  }
+  .mobile-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .accordion-card-mobile {
+    background: #142b65;
+    border-radius: 16px;
+    overflow: hidden;
+    color: white;
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+  
+  .accordion-header-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    font-weight: 700;
+    font-family: "Golos Text", sans-serif;
+    font-size: 1rem;
+  }
+  
+  .color-strip {
+    height: 5px;
+    width: 100%;
+    background: #ffe200;
+  }
+  
+  .accordion-body-mobile {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background: #142b65;
+    align-items: center;
+  }
+  
+  .body-image {
+    width: 35%;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .body-content {
+    width: 60%;
+  }
+  
+  .body-content p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0 0 0.5rem 0;
+  }
+  
+  .section-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  .icon i.arrow {
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    padding: 5px;
+    display: inline-block;
+    transform: rotate(45deg);
+    transition: 0.3s ease;
+  }
+  
+  .icon i.up {
+    transform: rotate(-135deg);
+  }
+  
+  .icon i.down {
+    transform: rotate(45deg);
+  }
+  .edu-card{
+    display: none;
+  }
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-images {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .about-images img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .about-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .about-content p {
+    font-size: 0.95rem;
+  }
+  .arc-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-text span {
+    font-size: 1.5rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  .left-curve.top,
+  .left-curve.mid,
+  .left-curve.bottom,
+  .right-curve.top,
+  .right-curve.mid,
+  .right-curve.bottom {
+    display: none; /* Optional: Hide arc on small screens */
+  }
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flip-card {
+    width: 90%;
+    font-size: 40px;
+  }
+  .flip-front h3{
+    font-size: 28px;
+  }
+  .school-name {
+    font-size: 1.5rem;
+  }
+
+  .accordion-header {
+    font-size: 0.95rem;
+  }
+
+  .arrow {
+    width: 45px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+  .mv-wrapper {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 2rem 3rem;
+    text-align: center;
+  }
+
+  .mv-section.left,
+  .mv-section.right {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .right {
+    align-items: center;
+    height: auto;
+  }
+
+  .mv-icons {
+    flex-direction: row-reverse;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .puzzle {
+    width: 150px;
+  }
+
+  .mv-title {
+    font-size: 40px;
+  }
+
+  .mv-our {
+    font-size: 20px;
+  }
+
+  ul {
+    padding-left: 0;
+  }
+
+  .read-more {
+    justify-content: center;
+  }
+  .puzzle-red{
+    bottom: 48px;
+    left: 34px;
+
+  }
+  .puzzle-blue{
+    top: 23px;
+    right: 47px;
+  }
+  .edu-accordion-wrapper {
+    flex-direction: column;
+    padding: 2rem;
+  }
+  .edu-accordion {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1rem;
+  }
+
+  .edu-card {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  min-width: 280px;
+  max-width: 90vw;
+  height: auto;
+}
+
+  
+}
+
+@media (max-width: 500px) {
+  .banner .clouds {
+    bottom: -8%;
+  }
+  .edu-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .edu-card {
+    width: 90%;
+    max-width: 320px;
+  }
+
+  .opened-image {
+    height: 120px;
+  }
+
+  .opened-content h3 {
+    font-size: 1rem;
+  }
+
+  .opened-content p {
+    font-size: 0.8rem;
+  }
+
+  .know-more {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+  }
+}
+@media (max-width: 380px) {
+  .banner .clouds {
+    bottom: -5%;
+  }
+}

@@ -1,0 +1,59 @@
+<div class="teaching-page">
+    <!-- Banner -->
+    <div class="banner-section">
+
+    </div>
+  
+    <!-- Curriculum Section -->
+    <section class="curriculum-section">
+        <h1>Teaching & Learning</h1>
+        <div>
+            <h2>Our Curriculum</h2>
+            <p>
+              We believe learning should go beyond the classroom. Rooted in both traditional Indian wisdom and modern education practices,
+              our approach blends values, creativity, and skill-building. Through every stage – pre-primary, primary, higher primary, and secondary –
+              we help students grow into confident, curious, and compassionate individuals ready for tomorrow.
+            </p>
+        
+        </div>
+      <div class="content-area">
+        <div class="accordion-wrapper">
+            <div class="accordion-list">
+              <div
+                *ngFor="let section of sections"
+                class="accordion-item"
+                [class.active]="activeSection === section.id"
+                [style.borderLeftColor]="section.color"
+              >
+                <div class="accordion-header" (click)="setActive(section.id)">
+                  <strong>{{ section.title }}</strong>
+                  <span class="toggle-icon" [class.open]="activeSection === section.id">+</span>
+                </div>
+                <div class="accordion-body" [class.open]="activeSection === section.id">
+                  <p>{{ section.content }}</p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="accordion-image">
+              <img [src]="getActiveSection()?.image" alt="section image" />
+            </div>
+          </div>
+      </div>
+    </section>
+  
+    <!-- Emphasis Section -->
+    <section class="emphasize">
+      <h3>We also emphasize:</h3>
+      <ul>
+        <li>Mental wellness and goal-setting</li>
+        <li>Exposure to technology and current affairs</li>
+        <li>Growth mindset and positive discipline</li>
+        <li>Collaboration and respectful communication</li>
+      </ul>
+      <p>
+        Every stage at Arka is thoughtfully planned to support holistic growth – blending knowledge, creativity and values into one meaningful journey.
+      </p>
+    </section>
+  </div>
+  

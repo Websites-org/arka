@@ -1,0 +1,30 @@
+<header class="navbar">
+    <div class="logo">
+      <img src="/navbar-logo.svg" alt="Arka Logo" />
+    </div>
+
+      
+    <div class="menu-toggle" (click)="menuOpen = !menuOpen">
+        <i class="fas" [ngClass]="menuOpen ? 'fa-times' : 'fa-bars'"></i>
+      </div>
+  
+    <nav [class.active]="menuOpen" class="nav-container">
+        <div class="nav-links">
+            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+            <a routerLink="/about" routerLinkActive="active">About Us</a>
+            <a routerLink="/curriculum" routerLinkActive="active">Curriculum</a>
+            <a routerLink="/admission" routerLinkActive="active">Admission</a>
+            <a routerLink="/contact" routerLinkActive="active">Contact Us</a>
+        </div>
+
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.facebook.com/share/1Au4VHPWen/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/arka_school_kolar?igsh=czNlNWxsbXp4bTQ3"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </nav>
+  
+
+  </header>
+  
