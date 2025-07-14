@@ -580,9 +580,9 @@
   align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 2rem 6rem;
+  padding: 2rem 9rem;
   gap: 2rem;
-  height: 70vh;
+  height: 80vh;
 }
 
 .mv-section {
@@ -593,9 +593,10 @@
 .right {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-end;
   height: 70vh;
+  padding-right: 3rem;
 }
 
 .mv-icons {
@@ -604,6 +605,9 @@
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  position: relative;
+  top: -120px;
+  left: 100px;
 }
 
 .puzzle-container {
@@ -615,19 +619,19 @@
 
 .puzzle {
   position: relative;
-  width: 270px;
+  width: 380px;
   height: auto;
 }
 
 .puzzle-blue {
-  top: 48px;
-  right: -27px;
+  top: 80px;
+  right: -29px;
   z-index: 2;
 }
 
 .puzzle-red {
-  bottom: 105px;
-  left: -112px;
+  bottom: 137px;
+  left: -153px;
   z-index: 1;
 }
 
@@ -1267,6 +1271,8 @@ ul {
     flex-direction: row-reverse;
     gap: 1rem;
     margin: 1rem 0;
+    top: 0;
+    left: 0;
   }
 
   .puzzle {
@@ -1317,6 +1323,7 @@ ul {
     max-width: 90vw;
     height: auto;
   }
+  
 }
 
 @media (max-width: 500px) {

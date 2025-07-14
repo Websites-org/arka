@@ -28,7 +28,7 @@
 
     .nav-links {
       display: flex;
-      gap: 64px;
+      gap: 52px;
 
       a {
         text-decoration: none;
