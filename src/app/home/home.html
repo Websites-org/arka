@@ -87,20 +87,28 @@
         </ng-template>
       </div>
       <div class="mobile-accordion">
-        <div class="accordion-card-mobile" *ngFor="let stage of stages; let i = index" [class.open]="activeIndex === i">
-          <div class="accordion-header-mobile" (click)="setActiveCard(i)">
-            <span class="title">{{ stage.title }}</span>
-          </div>
-
-          <div class="color-strip" [style.background]="stage.color"></div>
-
-          <div class="accordion-body-mobile" *ngIf="activeIndex === i">
-            <img [src]="stage.bgImage" alt="image" class="body-image" />
-            <div class="body-content">
+        <div class="accordion-card-mobile" *ngFor="let stage of stages; let i = index" [class.open]="activeIndex === i"         (click)="setActiveCard(i)" [ngStyle]="{ '--card-color': stage.color }">
+          <ng-container *ngIf="i === activeIndex; else closedCard">
+            <div class="color-bar"></div>
+            <img [src]="stage.image" class="opened-image" />
+            <div class="opened-content">
+              <h3>{{ stage.title }}</h3>
               <p>{{ stage.description }}</p>
-              <span class="section-label">{{ stage.title }}</span>
+              <button class="know-more">Know More</button>
             </div>
-          </div>
+          </ng-container>
+          <ng-template #closedCard>
+            <div class="card-background" [ngStyle]="{
+              'background-image':
+                'linear-gradient(180deg, rgba(255,255,255,0.8) 0%, rgba(0,68,124,0.8) 100%), url(' + stage.image + ')'
+            }">
+              <div class="color-bar"></div>
+              <div class="card-bottom">
+                <h3>{{ stage.title }}</h3>
+                <!-- <button class="know-more">Know More</button> -->
+              </div>
+            </div>
+          </ng-template>
         </div>
       </div>
 

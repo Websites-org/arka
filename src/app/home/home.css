@@ -27,14 +27,14 @@
   position: absolute;
   top: 40px;
   right: 40px;
-  width: 120px;
+  width: 170px;
   z-index: 2;
 }
 
 .banner .clouds {
   position: absolute;
-  bottom: -20%;
-  left: -36px;
+  bottom: -17%;
+  left: -79px;
   width: 120%;
   z-index: 3;
   overflow: hidden;
@@ -59,7 +59,7 @@
   flex: 2;
   max-width: 800px;
   position: relative;
-  left: 41px;
+  left: 90px;
 }
 
 .banner-content .left-banner h1 {
@@ -91,6 +91,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin-top: 64px;
 }
 
 .banner-content .cta-buttons .explore {
@@ -98,20 +99,26 @@
   border: 2px solid #ffc107;
   color: #ffc107;
   padding: 0.6rem 1.4rem;
-  border-radius: 8px;
-  font-weight: bold;
+  border-radius: 10px;
+  font-weight: 600;
   cursor: pointer;
   transition: 0.3s ease;
+  width: 170px;
+  height: 50px;
+  font-size: 20px;
 }
 
 .banner-content .cta-buttons .contact {
   background: #fff;
-  color: #f44336;
+  color:#FF7F00;
   padding: 0.6rem 1.4rem;
   border: none;
-  border-radius: 8px;
-  font-weight: bold;
+  border-radius: 10px;
+  font-weight: 600;
   cursor: pointer;
+  width: 170px;
+  height: 50px;
+  font-size: 20px;
 }
 
 .banner-content .right-banner {
@@ -124,8 +131,8 @@
 
 .banner-content .right-banner img {
   width: 100%;
-  max-width: 484px;
-  height: 520px;
+  max-width: 625.406px;
+  height: 612px;
   object-fit: contain;
   margin-bottom: -269px;
   z-index: -1;
@@ -133,9 +140,9 @@
 }
 .banner .rocket {
   position: absolute;
-  bottom: 190px;
+  bottom: 200px;
   left: 40px;
-  width: 90px;
+  width: 130px;
   z-index: 2; /* Behind clouds but in front of background */
   opacity: 0.8;
 }
@@ -146,10 +153,14 @@
   text-align: center;
   overflow: hidden;
   height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .about-text {
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
   position: relative;
   z-index: 2;
@@ -175,10 +186,11 @@
   color: #000;
   text-align: center;
   font-family: "Nunito Sans";
-  font-size: 18px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 600;
-  line-height: 28px; /* 116.667% */
+  line-height: 28px;
+  width: 100%;
 }
 
 .learn-more {
@@ -218,36 +230,36 @@
 
 /* Left side curve */
 .left-curve.top {
-  top: 10%;
-  left: 7%;
-  transform: rotate(-20deg) translateY(-10px);
+  top: 12%;
+  left: 4%;
+  transform: rotate(-17deg) translateY(-10px);
 }
 .left-curve.mid {
   top: 35%;
-  left: 13%;
-  transform: rotate(-8deg) translateY(0);
+  left: 7%;
+  transform: rotate(-5deg) translateY(0);
 }
 .left-curve.bottom {
-  top: 65%;
-  left: 7%;
-  transform: rotate(12deg) translateY(10px);
+  top: 61%;
+  left: 4%;
+  transform: rotate(8deg) translateY(10px);
 }
 
 /* Right side curve */
 .right-curve.top {
-  top: 10%;
-  right: 7%;
-  transform: rotate(20deg) translateY(-10px);
+  top: 15%;
+  right: 4%;
+  transform: rotate(20deg) translateY(-12px);
 }
 .right-curve.mid {
-  top: 35%;
-  right: 13%;
+  top: 37%;
+  right: 9%;
   transform: rotate(8deg) translateY(0);
 }
 .right-curve.bottom {
-  top: 65%;
-  right: 7%;
-  transform: rotate(-12deg) translateY(10px);
+  top: 58%;
+  right: 4%;
+  transform: rotate(-3deg) translateY(12px)
 }
 
 /* Hover effect */
@@ -490,7 +502,7 @@
 }
 
 .description {
-  max-width: 700px;
+  max-width: 550px;
   margin: auto;
   color: #000;
   text-align: center;
@@ -499,6 +511,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: 26px; /* 162.5% */
+
 }
 
 .accordion {
@@ -581,22 +594,22 @@
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 2rem 9rem;
-  gap: 2rem;
+  /* gap: 2rem; */
   height: 80vh;
 }
 
 .mv-section {
-  flex: 1 1 300px;
-  max-width: 400px;
+  flex: 1 1 400px;
+  max-width: 500px;
 }
 
 .right {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-end;
   height: 70vh;
-  padding-right: 3rem;
+  /* padding-right: 3rem; */
 }
 
 .mv-icons {
@@ -749,12 +762,7 @@ ul {
 
 .edu-card {
   flex: 1;
-  height: 350px;
-  overflow: hidden;
-  position: relative;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: flex 0.5s ease;
+  transition: flex 0.7s ease;
 }
 .edu-card.active {
   border-radius: 12px 12px 60px 12px;
@@ -772,7 +780,7 @@ ul {
   border-radius: 20px;
   overflow: hidden;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.7s ease;
   background-size: cover;
   background-position: center;
 }
@@ -821,7 +829,7 @@ ul {
   text-align: center;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  animation: fadeIn 0.3s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .card-expand p {
@@ -831,11 +839,18 @@ ul {
 
 .know-more {
   background: #d62828;
-  color: white;
   border: none;
   border-radius: 20px;
-  padding: 6px 16px;
-  font-size: 0.85rem;
+  padding: 10px 20px;
+  color: #FFF;
+  font-family: "Golos Text";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.12px;
+  width: 107px;
+  height: 34px;
 }
 .edu-cards {
   display: flex;
@@ -851,7 +866,7 @@ ul {
   overflow: hidden;
   cursor: pointer;
   background: #fff;
-  transition: all 0.3s ease;
+  transition: all 1s ease;
 }
 
 /* ================= CLOSED STATE ================= */
@@ -887,15 +902,7 @@ ul {
   margin-bottom: 0.5rem;
 }
 
-.know-more {
-  background-color: #d62828;
-  color: #fff;
-  border: none;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  cursor: pointer;
-}
+
 
 /* ================= OPENED STATE ================= */
 
@@ -910,6 +917,7 @@ ul {
 .opened-content {
   padding: 1rem;
   text-align: center;
+  width: 285px;
 }
 
 .opened-content h3 {
@@ -953,7 +961,7 @@ ul {
   padding: 1rem;
   color: white;
   border-radius: 20px;
-  transition: all 0.3s ease;
+  transition: all  0.7s ease;
   z-index: 3;
 }
 
@@ -967,15 +975,7 @@ ul {
   font-size: 0.9rem;
 }
 
-.know-more {
-  background: #d62828;
-  border: none;
-  padding: 0.5rem 1rem;
-  color: white;
-  border-radius: 30px;
-  margin-top: 0.5rem;
-  font-size: 0.85rem;
-}
+
 
 .mobile-accordion {
   display: none;
@@ -993,6 +993,15 @@ ul {
 }
 
 @media (max-width: 1300px) {
+  
+  .left-curve.top,
+  .left-curve.mid,
+  .left-curve.bottom,
+  .right-curve.top,
+  .right-curve.mid,
+  .right-curve.bottom {
+    display: none; /* Optional: Hide arc on small screens */
+  }
   .banner {
     flex-direction: column;
     align-items: stretch;
@@ -1027,9 +1036,9 @@ ul {
   }
 
   .banner .clouds {
-    width: 150%;
-    /* bottom: -10px; */
-    bottom: -16%;
+    width: 135%;
+    left: -338px;
+    bottom: -11%;
   }
   .banner-content .right-banner img {
     width: 100%;
@@ -1042,6 +1051,43 @@ ul {
   }
   .edu-card {
     width: 180px;
+  }
+  .mv-wrapper {
+    /* flex-direction: column; */
+    align-items: center;
+    height: auto;
+    padding: 2rem 3rem;
+    text-align: center;
+    flex-wrap: nowrap;
+  }
+
+  .mv-section.left,
+  .mv-section.right {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .right {
+    align-items: center;
+    height: auto;
+  }
+
+  .mv-icons {
+    flex-direction: row-reverse;
+    gap: 1rem;
+    margin: 1rem 0;
+    top: 0;
+    left: 0;
+  }
+  .puzzle-red {
+    bottom: 48px;
+    left: 34px;
+  }
+  .puzzle-blue {
+    top: 23px;
+    right: 47px;
   }
 }
 @media (max-width: 1024px) {
@@ -1077,7 +1123,7 @@ ul {
 
 @media (max-width: 800px) {
   .banner {
-    margin-top: 80px;
+    margin-top: 100px;
   }
   .banner .rocket {
     top: 5px;
@@ -1085,16 +1131,19 @@ ul {
   .mobile-accordion {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 1rem;
   }
 
   .accordion-card-mobile {
-    background: #142b65;
-    border-radius: 16px;
+    background: linear-gradient(180deg, #fff 0%, #00457c 117.5%);
     overflow: hidden;
     color: white;
-    transition: all 0.3s ease;
+    transition: all 1s ease;
     width: 100%;
+    height: 80px;
+    border-radius: 20px;
   }
 
   .accordion-header-mobile {
@@ -1117,8 +1166,14 @@ ul {
     display: flex;
     gap: 1rem;
     padding: 1rem;
-    background: #142b65;
+    /* border-radius: 12px 12px 60px 12px; */
+    background: linear-gradient(180deg, #fff 0%, #00457c 117.5%);
     align-items: center;
+  }
+
+  .accordion-card-mobile.open{
+    border-radius: 12px 12px 60px 12px;
+    height: 400px;
   }
 
   .body-image {
@@ -1165,6 +1220,12 @@ ul {
 }
 /* Responsive */
 @media (max-width: 768px) {
+  .banner .clouds{
+    width: 135%;
+    left: -242px;
+    bottom: -11%;
+  }
+
   .about-section {
     flex-direction: column;
     align-items: center;
@@ -1306,6 +1367,8 @@ ul {
   .edu-accordion-wrapper {
     flex-direction: column;
     padding: 2rem;
+    justify-content: center;
+    align-items: center;
   }
   .edu-accordion {
     display: flex;
@@ -1323,12 +1386,16 @@ ul {
     max-width: 90vw;
     height: auto;
   }
+  .banner-content .left-banner h1{
+    font-size: 48px;
+  }
   
 }
 
 @media (max-width: 500px) {
   .banner .clouds {
     bottom: -4%;
+    left: -100px;
   }
   .edu-cards {
     flex-direction: column;
@@ -1353,12 +1420,22 @@ ul {
   }
 
   .know-more {
-    font-size: 0.75rem;
+    font-size: 12px;
     padding: 6px 12px;
+  }
+  .accordion-card-mobile.open{
+    border-radius: 12px 12px 60px 12px;
+    height: 350px;
   }
 }
 @media (max-width: 380px) {
   .banner .clouds {
-    bottom: -5%;
+    bottom: -4%;
+  }
+}
+
+@media (max-width: 350px){
+  .banner .clouds{
+    bottom: -3%;
   }
 }
