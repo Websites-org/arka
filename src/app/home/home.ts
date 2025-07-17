@@ -1,6 +1,7 @@
-import { Component,QueryList, ViewChildren, ElementRef, AfterViewInit } from '@angular/core';
+import { Component,QueryList, ViewChildren, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import * as AOS from 'aos';
 import {
   trigger,
   state,
@@ -23,7 +24,12 @@ import {
   ]
 })
 export class Home implements AfterViewInit {
-  activeIndex = 0;
+  @ViewChild('aboutSection') aboutSection!: ElementRef;
+
+  scrollToAbout(): void {
+    this.aboutSection.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  activeIndex: number | null = 0;
 
   cards = [
     {
@@ -61,8 +67,9 @@ export class Home implements AfterViewInit {
   setActive(id: string) {
     this.activeCardId = id;
   }
-  setActiveCard(id: number){
-    this.activeIndex = id
+  setActiveCard(index: number): void {
+    this.activeIndex = index;
+    this.hoveredIndex = null; // clear hover when clicked
   }
   card = [
     {
@@ -182,5 +189,22 @@ export class Home implements AfterViewInit {
         (el) => el.nativeElement.scrollHeight
       );
     });
+  }
+  ngOnInit(): void {
+    AOS.init({
+      duration: 1000, // duration of animation in ms
+      once: false
+    });
+  }
+  hoveredIndex: number | null = null;
+
+  
+  setHoveredCard(index: number): void {
+    this.hoveredIndex = index;
+    this.activeIndex = null; // clear click when hovered
+  }
+  
+  clearHoveredCard(): void {
+    this.hoveredIndex = null;
   }
 }

@@ -10,12 +10,12 @@
   
     <nav [class.active]="menuOpen" class="nav-container">
         <div class="nav-links">
-            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
-            <a routerLink="/about" routerLinkActive="active">About Us</a>
-            <a routerLink="/curriculum" routerLinkActive="active">Curriculum</a>
-            <a routerLink="/admission" routerLinkActive="active">Admission</a>
-            <a routerLink="/facility" routerLinkActive="active">Facilities</a>
-            <a routerLink="/contact" routerLinkActive="active">Contact Us</a>
+            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Home</a>
+            <a routerLink="/about-us" routerLinkActive="active" (click)="closeMenu()">About Us</a>
+            <a routerLink="/curriculum" routerLinkActive="active" (click)="closeMenu()">Curriculum</a>
+            <a routerLink="/admission" routerLinkActive="active" (click)="closeMenu()">Admission</a>
+            <a routerLink="/facility" routerLinkActive="active" (click)="closeMenu()">Facilities</a>
+            <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact Us</a>
 
         </div>
 

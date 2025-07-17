@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-learning',
@@ -56,6 +57,13 @@ export class Learning {
 
   getActiveSection() {
     return this.sections.find(s => s.id === this.activeSection);
+  }
+
+  ngOnInit(): void {
+    AOS.init({
+      duration: 1000, // duration of animation in ms
+      once: false
+    });
   }
 
 }

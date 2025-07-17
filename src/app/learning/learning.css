@@ -2,9 +2,24 @@
   color: #222;
   background-color: #fff8f5;
   .banner-section {
-    background:  linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/school-banner.svg") no-repeat center center/cover;
+    background: url("/school-banner.svg") no-repeat center center/cover;
     height: 80vh;
     position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 3rem;
+  }
+
+  .banner-content {
+    color: #053247;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: "Golos Text";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 107px; /* 100% */
+    /* max-width: 400px; */
   }
 
   .curriculum-section {
@@ -127,7 +142,7 @@
       overflow: hidden;
 
       img {
-        width: 520px;
+        width: 550px;
         height: 670px;
         border-radius: 12px;
       }
@@ -152,7 +167,7 @@
   }
   @media (max-width: 1024px) {
     gap: 3rem;
-    padding: 1.5rem;
+    padding: 0rem;
 
     .accordion-header strong {
       font-size: 24px;
@@ -255,7 +270,8 @@
 
   @media (max-width: 768px) {
     .banner-section {
-      height: 200px;
+      /* height: 200px; */
+      background: url("/school-banner-mobile.svg") no-repeat center center/cover;
 
       .overlay h1 {
         font-size: 1.8rem;
@@ -413,14 +429,13 @@
   text-align: center;
 
   h2 {
-    color: #00457C;
+    color: #00457c;
     font-family: "Golos Text";
     font-size: 36px;
     font-style: normal;
     font-weight: 600;
     line-height: 100%; /* 36px */
     margin-bottom: 3rem;
-
   }
 
   .intro,
@@ -525,23 +540,23 @@
     margin-inline: auto;
 
     h3 {
-        color: #DA251C;
-        font-family: "Golos Text";
-        font-size: 36px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 100%; /* 36px */
+      color: #da251c;
+      font-family: "Golos Text";
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 100%; /* 36px */
       margin-bottom: 2rem;
     }
 
     p {
-        color: #000;
-        text-align: center;
-        font-family: "Nunito Sans";
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 28px; /* 140% */
+      color: #000;
+      text-align: center;
+      font-family: "Nunito Sans";
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 28px; /* 140% */
     }
   }
 
@@ -580,7 +595,15 @@
   }
 }
 
+@media (max-width: 1300px){
+  .teaching-page .banner-content{
+    font-size: 48px;
+    line-height: 80px;
+  }
+}
+
 @media (max-width: 800px) {
+
   .curriculum-section {
     padding: 1rem !important;
   }
@@ -610,5 +633,17 @@
   }
   .teaching-page .banner-section {
     margin-top: 80px;
+  }
+  .teaching-page .banner-section {
+    align-items: flex-end; /* Push content to bottom */
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .teaching-page .banner-content {
+    font-size: 24px;
+    width: 100%;
+    line-height: 60px;
+    text-align: left;
   }
 }

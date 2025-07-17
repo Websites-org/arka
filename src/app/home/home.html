@@ -15,7 +15,7 @@
           strong values, joyful learning, and hands-on<br /> activities led by caring teachers.
         </p>
         <div class="cta-buttons">
-          <button class="explore">Explore Now</button>
+          <button class="explore" (click)="scrollToAbout()">Explore Now</button>
           <button class="contact" [routerLink]="'/contact'">Contact Us</button>
         </div>
       </div>
@@ -26,7 +26,7 @@
     </div>
   </div>
 
-  <section class="about-arka">
+  <section class="about-arka" #aboutSection>
     <div class="image-arc">
       <!-- Left arc images -->
       <img src="1.png" class="arc-img left-curve top" alt="Kids 1">
@@ -45,13 +45,13 @@
         Jnanambika Educational Trust is founded by Dr. Venugopal in 2018. The Trust has a vision to drive Arka
         International School, to nurture young minds, retain their creative talents and at the same time ...
       </p>
-      <a href="#" class="learn-more">Learn More</a>
+      <a routerLink="/about-us" class="learn-more">Learn More</a>
     </div>
   </section>
   <div class="edu-accordion-wrapper">
     <!-- Left Section -->
     <div class="edu-intro">
-      <h2>Empowering Young Minds,Every Step of the Way</h2>
+      <h2>Empowering Young Minds, Every Step of the Way</h2>
       <p>
         We believe that education is more than just academics - it's about helping every child grow with confidence,
         creativity and care. From their very first day in pre-primary to their final years in secondary, students at
@@ -62,15 +62,16 @@
 
     <!-- Accordion Cards -->
     <div class="edu-accordion">
-      <div class="edu-card" *ngFor="let stage of stages; let i = index" [class.active]="i === activeIndex"
-        (click)="setActiveCard(i)" [ngStyle]="{ '--card-color': stage.color }">
-        <ng-container *ngIf="i === activeIndex; else closedCard">
+      <div class="edu-card" *ngFor="let stage of stages; let i = index" [class.active]="i === activeIndex || i === hoveredIndex"
+        (click)="setActiveCard(i)"   (mouseenter)="setHoveredCard(i)"
+        (mouseleave)="clearHoveredCard()" [ngStyle]="{ '--card-color': stage.color }">
+        <ng-container *ngIf="i === activeIndex || i === hoveredIndex; else closedCard">
           <div class="color-bar"></div>
           <img [src]="stage.image" class="opened-image" />
           <div class="opened-content">
             <h3>{{ stage.title }}</h3>
             <p>{{ stage.description }}</p>
-            <button class="know-more">Know More</button>
+            <button routerLink="/curriculum" style="cursor: pointer;" class="know-more">Know More</button>
           </div>
         </ng-container>
         <ng-template #closedCard>

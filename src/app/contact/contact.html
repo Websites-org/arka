@@ -40,17 +40,71 @@
     </div>
   
     <div class="contact-form">
-      <form>
+      <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" novalidate>
         <div class="input-row">
-          <input type="text" placeholder="Name*" required />
-          <input type="text" placeholder="Last Name" />
+          <input
+          type="text"
+          name="name"
+          placeholder="First name"
+          required
+          ngModel
+          #name="ngModel"
+          pattern="^[a-zA-Z ]{2,30}$"
+        />
+        <div class="error" *ngIf="name.invalid && name.touched">
+          <small *ngIf="name.errors?.['required']">Name is required.</small>
+          <small *ngIf="name.errors?.['pattern']">Enter a valid name (2–30 letters).</small>
+        </div>
+
+        <input
+        type="text"
+        name="lastname"
+        placeholder="Last name"
+        required
+        ngModel
+        #lastname="ngModel"
+        pattern="^[a-zA-Z ]{1,30}$"
+      />
+      <div class="error" *ngIf="lastname.invalid && lastname.touched">
+        <small *ngIf="lastname.errors?.['required']">Name is required.</small>
+        <small *ngIf="lastname.errors?.['pattern']">Enter a valid lastname (2–30 letters).</small>
+      </div>
+
         </div>
         <div class="input-row">
-          <input type="tel" placeholder="Phone Number*" required />
-          <input type="email" placeholder="Email Address" />
+          <input
+          type="text"
+          name="phone"
+          placeholder="Phone Number"
+          required
+          ngModel
+          #phone="ngModel"
+          pattern="^[6-9][0-9]{9}$"
+        />
+        <div class="error" *ngIf="phone.invalid && phone.touched">
+          <small *ngIf="phone.errors?.['required']">Contact number is required.</small>
+          <small *ngIf="phone.errors?.['pattern']">Enter a valid 10-digit Indian number.</small>
+        </div>
+          <input
+          type="email"
+          name="email"
+          placeholder="Email Address"
+          ngModel
+          #email="ngModel"
+          pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+        />
+        <div class="error" *ngIf="email.invalid && email.touched">
+          <small *ngIf="email.errors?.['pattern']">Enter a valid email.</small>
+        </div>
         </div>
         <div class="textarea">
-          <textarea rows="5" placeholder="Your Message" ></textarea>
+          <textarea
+          name="message"
+          rows="3"
+          placeholder="Your message"
+          ngModel
+          #message="ngModel"
+        ></textarea>
         </div>
         <button class="submit" type="submit">Send Message</button>
       </form>

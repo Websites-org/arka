@@ -10,4 +10,8 @@ import { RouterModule } from '@angular/router';
 })
 export class Navbar {
   menuOpen = false;
+  closeMenu() {
+    this.menuOpen = false;
+  }
+  
 }
