@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,QueryList, ViewChildren, ElementRef, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import {
@@ -22,7 +22,7 @@ import {
     ])
   ]
 })
-export class Home {
+export class Home implements AfterViewInit {
   activeIndex = 0;
 
   cards = [
@@ -114,10 +114,11 @@ export class Home {
     
   ];
   toggle(index: number) {
-    this.faqs = this.faqs.map((faq, i) => ({
-      ...faq,
-      open: i === index
-    }));
+    this.faqs.forEach((faq, i) => {
+      faq.open = i === index ? !faq.open : false;
+    });
+
+    this.calculateHeights();
   }
   stages = [
     {
@@ -167,5 +168,19 @@ export class Home {
   toggleReadMore(event: Event): void {
     event.preventDefault(); // prevent page jump from anchor tag
     this.showAll = !this.showAll;
+  }
+  bodyHeights: number[] = [];
+
+  @ViewChildren('bodyWrapper') bodyWrappers!: QueryList<ElementRef>;
+
+  ngAfterViewInit(): void {
+    this.calculateHeights();
+  }
+  private calculateHeights(): void {
+    setTimeout(() => {
+      this.bodyHeights = this.bodyWrappers.map(
+        (el) => el.nativeElement.scrollHeight
+      );
+    });
   }
 }

@@ -2,7 +2,7 @@
   color: #222;
   background-color: #fff8f5;
   .banner-section {
-    background: url("/school-banner.svg") no-repeat center center/cover;
+    background:  linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/school-banner.svg") no-repeat center center/cover;
     height: 80vh;
     position: relative;
   }
@@ -219,13 +219,13 @@
     background: #fff8f5;
     padding: 4rem;
     padding-top: 0px;
-     /* margin-top: 2rem;  */
+    /* margin-top: 2rem;  */
     color: #000;
     font-family: "Nunito Sans";
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
-    line-height: 34px;  
+    line-height: 34px;
 
     h3 {
       color: #da251c;
@@ -272,41 +272,343 @@
       font-size: 16px;
     }
 
-    .emphasize p{
-        font-size: 16px;
+    .emphasize p {
+      font-size: 16px;
+    }
+  }
+}
+.co-curricular {
+  background: #fff;
+  padding: 4rem 2rem;
+  font-family: "Nunito Sans", sans-serif;
+  color: #222;
+
+  h2 {
+    color: #053247;
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: "Golos Text";
+    margin-bottom: 1rem;
+  }
+
+  .intro,
+  .sub-intro {
+    max-width: 900px;
+    margin: 0 auto 1.5rem auto;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+
+    .activity-box {
+      background: #002d5b;
+      color: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+
+      h4 {
+        font-size: 1.4rem;
+        font-family: "Golos Text";
+      }
+
+      p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+
+      .icon {
+        font-size: 2rem;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0.5rem;
+      }
+
+      .red {
+        background: #e84a3a;
+      }
+      .green {
+        background: #45b649;
+      }
+      .yellow {
+        background: #ffcb05;
+      }
+      .blue {
+        background: #1e88e5;
+      }
+
+      i {
+        color: #fff;
+      }
+    }
+  }
+
+  .why-matters {
+    margin-top: 3rem;
+    text-align: center;
+    h3 {
+      color: #da251c;
+      font-family: "Golos Text";
+      font-size: 1.8rem;
+      margin-bottom: 0.8rem;
+    }
+    p {
+      font-size: 1rem;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    .intro,
+    .sub-intro {
+      font-size: 16px;
+    }
+
+    .activities-grid {
+      gap: 1.5rem;
+    }
+
+    .activity-box {
+      padding: 1rem;
+
+      h4 {
+        font-size: 1.2rem;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    .why-matters h3 {
+      font-size: 1.5rem;
+    }
+
+    .why-matters p {
+      font-size: 15px;
+    }
+  }
+}
+.co-curricular {
+  padding: 4rem 2rem;
+  background: #fff8f5;
+  text-align: center;
+
+  h2 {
+    color: #00457C;
+    font-family: "Golos Text";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 36px */
+    margin-bottom: 3rem;
+
+  }
+
+  .intro,
+  .sub-intro {
+    max-width: 1000px;
+    margin: 0 auto 1rem auto;
+    color: #000;
+    text-align: center;
+    font-family: "Nunito Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px; /* 140% */
+  }
+
+  .co-curricular-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2.5rem;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .activity-card {
+    width: 500px;
+    background-color: #002b4e;
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    position: relative;
+    text-align: left;
+    font-family: "Nunito Sans";
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h4 {
+      color: #fff;
+      font-family: "Golos Text";
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 28px; /* 140% */
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: #fff;
+      font-family: "Nunito Sans";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px; /* 142.857% */
+    }
+
+    .icon {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid white;
+
+      /* img {
+          width: 20px;
+          height: 20px;
+        } */
+
+      &.red {
+        background-color: #da251c;
+      }
+      &.green {
+        background-color: #55a802;
+      }
+      &.yellow {
+        background-color: #ffe200;
+      }
+      &.blue {
+        background-color: #00457c;
+      }
+    }
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  .co-curricular-bottom {
+    margin-top: 5rem;
+    max-width: 800px;
+    margin-inline: auto;
+
+    h3 {
+        color: #DA251C;
+        font-family: "Golos Text";
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 100%; /* 36px */
+      margin-bottom: 2rem;
+    }
+
+    p {
+        color: #000;
+        text-align: center;
+        font-family: "Nunito Sans";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 28px; /* 140% */
+    }
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    .intro,
+    .sub-intro,
+    .co-curricular-bottom p {
+      font-size: 15px;
+    }
+
+    .activity-card {
+      padding: 1rem 1.5rem;
+
+      h4 {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      .icon {
+        width: 35px;
+        height: 35px;
+
+        img {
+          width: 18px;
+          height: 18px;
+        }
+      }
     }
   }
 }
 
-@media (max-width: 800px){
-    .curriculum-section{
-        padding: 1rem !important;
-    }
-    .teaching-page .accordion-wrapper{
-        padding: 0;
-    }
-    .teaching-page .accordion-wrapper .accordion-item .accordion-header strong {
-        font-size: 19px;
-    }
-    .accordion-image{
-        display: none;
-    }
-    .teaching-page .accordion-wrapper .accordion-item{
-        padding: 1rem;
-    }
-    .teaching-page .emphasize{
-        padding: 2rem;
-    }
-    .teaching-page .curriculum-section h1{
-        font-size: 38px;
-    }
-    .teaching-page .curriculum-section h2{
-        font-size: 34px;
-    }
-    .teaching-page .curriculum-section p{
-        font-size: 16px;
-    }
-    .teaching-page .banner-section{
-        margin-top: 80px;
-    }
+@media (max-width: 800px) {
+  .curriculum-section {
+    padding: 1rem !important;
+  }
+  .teaching-page .accordion-wrapper {
+    padding: 0;
+  }
+  .teaching-page .accordion-wrapper .accordion-item .accordion-header strong {
+    font-size: 19px;
+  }
+  .accordion-image {
+    display: none;
+  }
+  .teaching-page .accordion-wrapper .accordion-item {
+    padding: 1rem;
+  }
+  .teaching-page .emphasize {
+    padding: 2rem;
+  }
+  .teaching-page .curriculum-section h1 {
+    font-size: 38px;
+  }
+  .teaching-page .curriculum-section h2 {
+    font-size: 34px;
+  }
+  .teaching-page .curriculum-section p {
+    font-size: 16px;
+  }
+  .teaching-page .banner-section {
+    margin-top: 80px;
+  }
 }

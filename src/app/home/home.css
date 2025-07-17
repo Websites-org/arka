@@ -519,7 +519,6 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  transition: 1s;
 }
 
 .accordion-item {
@@ -537,10 +536,7 @@
   color: #000;
   font-family: Kanit;
   font-size: 20px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
-  letter-spacing: 0.2px;
   cursor: pointer;
 }
 
@@ -549,7 +545,6 @@
   color: #000;
   font-family: "Nunito Sans";
   font-size: 14px;
-  font-style: normal;
   font-weight: 500;
   line-height: 18px;
 }
@@ -565,29 +560,29 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 2s ease-in-out;
+  transition: transform 0.3s ease-in-out;
   cursor: pointer;
   font-weight: 400;
 }
 
 .arrow.rotate {
-  transform: rotate(99deg); /* ↗ */
+  transform: rotate(90deg);
 }
+
 .accordion-body-wrapper {
   overflow: hidden;
   max-height: 0;
   opacity: 0;
   transform: translateY(-10px);
-  transition: all 1s ease;
-  transition-delay: 3s;
+  transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
 }
 
 .accordion-body-wrapper.open {
-  max-height: 500px;
-  margin-top: 10px;
+  /* max-height: 200px; */
   opacity: 1;
   transform: translateY(0);
 }
+
 .mv-wrapper {
   display: flex;
   align-items: flex-start;
