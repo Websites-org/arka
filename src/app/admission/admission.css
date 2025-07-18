@@ -2,14 +2,22 @@
   position: relative;
   width: 100%;
   height: 90vh;
-  background: linear-gradient(270deg, rgba(217, 217, 217, 0.00) 0%, rgba(83, 83, 83, 0.31) 62.79%, rgba(75, 75, 75, 0.33) 68.54%, rgba(74, 74, 74, 0.33) 76.04%, rgba(44, 44, 44, 0.40) 88.85%, rgba(0, 0, 0, 0.50) 100%),url("/admission-bg.svg") no-repeat center center/cover;
+  background: linear-gradient(
+      270deg,
+      rgba(217, 217, 217, 0) 0%,
+      rgba(83, 83, 83, 0.31) 62.79%,
+      rgba(75, 75, 75, 0.33) 68.54%,
+      rgba(74, 74, 74, 0.33) 76.04%,
+      rgba(44, 44, 44, 0.4) 88.85%,
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    url("/admission-bg.svg") no-repeat center center/cover;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   padding: 4rem 2rem;
   color: #fff;
 }
-
 
 .content-wrapper {
   position: relative;
@@ -123,7 +131,7 @@
   transform: scaleX(-1);
 }
 .age-criteria {
-  background-color: #FFFBF8;
+  background-color: #fffbf8;
   padding: 6rem 2rem;
   text-align: center;
 }
@@ -144,7 +152,7 @@
   justify-content: center;
   gap: 2rem;
   padding: 3rem 1rem;
-  background-color: #FFFBF8;
+  background-color: #fffbf8;
 }
 
 .age-card {
@@ -167,7 +175,6 @@
   position: relative;
   z-index: 2;
 }
-
 
 /* Title */
 .age-card .label {
@@ -290,7 +297,6 @@
   background: linear-gradient(45deg, #0052d4, #4364f7, #6fb1fc, #0052d4);
 } */
 
-
 .info-card {
   background: #e3f0ff;
   padding: 2rem;
@@ -376,17 +382,17 @@
 .info-card:hover .bottom-line {
   width: 100%;
 }
-.document-section{
-  background-color: #FFFBF8;
+.document-section {
+  background-color: #fffbf8;
 }
-.document-section h2{
-  color: #0061AF;
-font-family: "Golos Text";
-font-size: 40px;
-font-style: normal;
-font-weight: 700;
-line-height: 100%; /* 40px */
-text-align: center;
+.document-section h2 {
+  color: #0061af;
+  font-family: "Golos Text";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 40px */
+  text-align: center;
 }
 .document-cards {
   display: flex;
@@ -394,7 +400,7 @@ text-align: center;
   flex-wrap: wrap;
   justify-content: center;
   padding: 2rem;
-  background-color: #FFFBF8;
+  background-color: #fffbf8;
 }
 
 .info-card {
@@ -754,8 +760,6 @@ select {
   }
 }
 
-
-
 /* Responsive */
 @media (max-width: 768px) {
   .age-card {
@@ -768,7 +772,7 @@ select {
     margin-top: 80px;
     align-items: center;
     justify-content: center;
-    background: url('/admission-mobile-bg.svg') no-repeat center center/cover;
+    background: url("/admission-mobile-bg.svg") no-repeat center center/cover;
   }
   .admission-banner {
     align-items: flex-start; /* move content to top */
@@ -810,7 +814,7 @@ select {
     justify-content: center;
     display: flex;
     flex-wrap: nowrap;
-    margin-top:3rem;
+    margin-top: 3rem;
     gap: 2rem;
   }
 
@@ -821,7 +825,7 @@ select {
     font-size: 14px;
     padding: 0;
   }
-  .text-block{
+  .text-block {
     padding: 0;
   }
 
@@ -838,7 +842,6 @@ select {
     max-width: 300px;
   }
 
- 
   .content-wrapper {
     flex-direction: column;
     text-align: center;
@@ -880,45 +883,46 @@ select {
     font-size: 14px;
     margin-bottom: 0.5rem;
   }
-  
+
   .image-block img {
     width: 70%;
     max-width: 250px;
   }
 
-  .age-criteria-grid{
-  gap: 1rem;
-  padding: 0;
+  .age-criteria-grid {
+    gap: 1rem;
+    padding: 0;
   }
 
   .age-card {
-    height: 200px;
-  } 
-  .age-card .label{
-    font-size: 24px;
+    height: 250px;
+    width: 200px;
+  }
+  .age-card .label {
+    font-size: 30px;
   }
 
-  .age-card .age-text{
-    top: 145px;
-    left: 131px;
-    font-size: 14px;
+  .age-card .age-text {
+    top: 147px;
+    left: 154px;
+    font-size: 20px;
   }
 
-  .age-card .age-number{
+  .age-card .age-number {
     position: absolute;
     top: 162px;
     left: 116px;
     color: #fff;
     font-family: "Golos Text";
-    font-size: 30px;
+    font-size: 50px;
     font-style: normal;
     font-weight: 700;
     line-height: 100%;
   }
 }
 
-@media (max-width: 380px){
-  .document-section h2{
+@media (max-width: 380px) {
+  .document-section h2 {
     font-size: 30px;
   }
   .age-card {
@@ -926,65 +930,65 @@ select {
     height: 250px;
   }
   /* Title */
-.age-card .label {
-  position: absolute;
-  top: 40px;
-  left: 0px;
-  color: #fff;
-  font-family: "Golos Text";
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%; /* 30px */
-  width: 100%;
-  text-wrap: nowrap;
-}
+  .age-card .label {
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    color: #fff;
+    font-family: "Golos Text";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 30px */
+    width: 100%;
+    text-wrap: nowrap;
+  }
 
-/* Circle */
-.age-card .circle {
-  position: absolute;
-  top: 120px;
-  left: 83px;
-  width: 170px;
-  height: 170px;
-  border-radius: 9999px;
-  box-shadow: -3px -3px 20px rgba(0, 0, 0, 0.25);
-  opacity: 0.6;
-  z-index: -1;
-}
+  /* Circle */
+  .age-card .circle {
+    position: absolute;
+    top: 120px;
+    left: 83px;
+    width: 170px;
+    height: 170px;
+    border-radius: 9999px;
+    box-shadow: -3px -3px 20px rgba(0, 0, 0, 0.25);
+    opacity: 0.6;
+    z-index: -1;
+  }
 
-/* Age number */
-.age-card .age-number {
-  position: absolute;
-  top: 168px;
-  left: 130px;
-  color: #fff;
-  font-family: "Golos Text";
-  font-size: 50px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%; /* 64px */
-}
+  /* Age number */
+  .age-card .age-number {
+    position: absolute;
+    top: 168px;
+    left: 130px;
+    color: #fff;
+    font-family: "Golos Text";
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 64px */
+  }
 
-/* "age" text */
-.age-card .age-text {
-  position: absolute;
-  top: 147px;
-  left: 154px;
-  color: #fff;
-  font-family: "Golos Text";
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%; /* 20px */
-}
-  .admission-banner{
+  /* "age" text */
+  .age-card .age-text {
+    position: absolute;
+    top: 147px;
+    left: 154px;
+    color: #fff;
+    font-family: "Golos Text";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 20px */
+  }
+  .admission-banner {
     height: 85vh;
   }
-  .text-block .highlight{
+  .text-block .highlight {
     font-size: 14px;
   }
-  .image-block{
+  .image-block {
     top: -91px;
     bottom: 90px;
   }
@@ -998,12 +1002,10 @@ select {
     font-size: 24px;
     line-height: 28px;
   }
-
 }
 
-@media (max-width: 330px){
-  .admission-banner{
+@media (max-width: 330px) {
+  .admission-banner {
     height: 82vh;
   }
-
 }
