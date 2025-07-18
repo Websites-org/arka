@@ -1,16 +1,16 @@
 <div class="home-container">
   <div class="banner">
     <!-- Decorative elements -->
-    <img src="sun.svg" alt="Sun" class="sun" />
-    <img src="/cloud.svg" alt="Clouds" class="clouds" />
-    <img src="/rocket.png" alt="rocket" class="rocket" />
+    <img src="joyful-learning-arka-school-kolar.svg" alt="Joyful learning at Arka International School Kolar" class="sun"  />
+    <img src="/elementary-classroom-background-kolar.svg" alt="Creative classroom design at Arka International School Kolar" class="clouds" />
+    <img src="/student-growth-learning-kolar-arka-school.png" alt="Smart class symbol at Arka School Kolar" class="rocket" />
 
 
     <div class="banner-content">
       <div class="left-banner">
-        <h1>Arka International School</h1>
+        <div class="heading">Arka International School</div>
         <p>
-          A place where education meets curiosity, confidence and care.<br />
+          A place where <a href="https://en.wikipedia.org/wiki/Education" target="_blank">education</a> meets curiosity, confidence and care.<br />
           From pre-primary to secondary, we help every child grow<br /> with
           strong values, joyful learning, and hands-on<br /> activities led by caring teachers.
         </p>
@@ -21,7 +21,7 @@
       </div>
 
       <div class="right-banner">
-        <img src="school-girl.svg" alt="Student" />
+        <img src="arka-international-school-student-kolar..svg" alt="Student of Arka International School Kolar with backpack" />
       </div>
     </div>
   </div>
@@ -29,18 +29,18 @@
   <section class="about-arka" #aboutSection>
     <div class="image-arc">
       <!-- Left arc images -->
-      <img src="1.png" class="arc-img left-curve top" alt="Kids 1">
-      <img src="2.png" class="arc-img left-curve mid" alt="Kids 2">
-      <img src="3.png" class="arc-img left-curve bottom" alt="Kids 3">
+      <img src="classroom-learning-arka-school-kolar.png" class="arc-img left-curve top" alt="Students at Arka School Kolar enjoying classroom learning">
+      <img src="arka-school-kids-smart-class-kolar.png" class="arc-img left-curve mid" alt="Arka International School kids with toys in smart class">
+      <img src="activity-time-arka-international-school-kolar.png" class="arc-img left-curve bottom" alt="Activity time at Arka International School Kolar">
 
       <!-- Right arc images -->
-      <img src="4.png" class="arc-img right-curve top" alt="Kids 4">
-      <img src="5.png" class="arc-img right-curve mid" alt="Kids 5">
-      <img src="6.png" class="arc-img right-curve bottom" alt="Kids 6">
+      <img src="outdoor-activities-arka-international-school-kolar.png" class="arc-img right-curve top" alt="Outdoor activities at Arka International School Kolar">
+      <img src="student-growth-activity-arka-school-kolar.png" class="arc-img right-curve mid" alt="Students measuring growth at Arka School Kolar">
+      <img src="stage-activity-arka-international-school-kolar.png" class="arc-img right-curve bottom" alt="Stage activity at Arka International School Kolar">
     </div>
 
     <div class="about-text">
-      <h2>ABOUT ARKA INTERNATIONAL SCHOOL</h2>
+      <h1>Best International School in Kolar, Bangalore</h1>
       <p>
         Jnanambika Educational Trust is founded by Dr. Venugopal in 2018. The Trust has a vision to drive Arka
         International School, to nurture young minds, retain their creative talents and at the same time ...
@@ -54,7 +54,7 @@
       <h2>Empowering Young Minds, Every Step of the Way</h2>
       <p>
         We believe that education is more than just academics - it's about helping every child grow with confidence,
-        creativity and care. From their very first day in pre-primary to their final years in secondary, students at
+        creativity and care. From their very first day in pre-primary to their final years in secondary, <a href="https://en.wikipedia.org/wiki/Student" target="_blank">students</a> at
         Arka experience joyful learning, meaningful classroom connections and the guidance of experienced
         teachers who truly care.
       </p>
@@ -67,7 +67,7 @@
         (mouseleave)="clearHoveredCard()" [ngStyle]="{ '--card-color': stage.color }">
         <ng-container *ngIf="i === activeIndex || i === hoveredIndex; else closedCard">
           <div class="color-bar"></div>
-          <img [src]="stage.image" class="opened-image" />
+          <img [src]="stage.image" class="opened-image" [alt]="stage.alt" />
           <div class="opened-content">
             <h3>{{ stage.title }}</h3>
             <p>{{ stage.description }}</p>
@@ -137,8 +137,8 @@
 
     <!-- Center Icons -->
     <div class="mv-icons">
-      <img src="vision.png" class="puzzle puzzle-blue" alt="Bulb Puzzle" />
-      <img src="mission.png" class="puzzle puzzle-red" alt="Target Puzzle" />
+      <img src="arka-school-vision-idea-icon-kolar.png" class="puzzle puzzle-blue" alt="Vision icon representing creativity at Arka International School" />
+      <img src="arka-school-mission-target-icon-kolar.png" class="puzzle puzzle-red" alt="Mission icon representing goals at Arka International School" />
     </div>
 
     <!-- Right: Vision -->
@@ -163,7 +163,7 @@
           <!-- Front: Blue Text Side -->
           <div class="flip-front" [ngStyle]="{'background-color': card.color}">
             <div class="icon-box">
-              <img [src]="card.icon" alt="Icon" />
+              <img [src]="card.icon" [alt]="card.alt" />
             </div>
             <h3>{{ card.title }}</h3>
             <p>{{ card.description }}</p>

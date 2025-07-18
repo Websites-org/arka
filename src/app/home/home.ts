@@ -1,4 +1,4 @@
-import { Component,QueryList, ViewChildren, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
+import { Component, QueryList, ViewChildren, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import * as AOS from 'aos';
@@ -9,6 +9,8 @@ import {
   transition,
   animate
 } from '@angular/animations';
+
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -29,6 +31,9 @@ export class Home implements AfterViewInit {
   scrollToAbout(): void {
     this.aboutSection.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
+
+  constructor(private titleService: Title, private metaService: Meta) { }
+
   activeIndex: number | null = 0;
 
   cards = [
@@ -75,25 +80,28 @@ export class Home implements AfterViewInit {
     {
       title: 'Sport Games',
       description: 'Structured sports help students build fitness, teamwork, and discipline - essential for all-round development beyond the classroom.',
-      icon: 'sports.png',
+      icon: 'arka-school-sports-activities-kolar.png',
+      alt: "Sports activities at Arka School for fitness and teamwork",
       label: 'Sport Games',
-      image:'sports-image.png',
+      image: 'arka-school-physical-education-kolar.png',
       color: '#DA251C'
     },
     {
       title: 'Music & Art',
       description: 'Creative programs in music and art encourage self-expression, boost confidence and enhance focus across all levels from pre-primary to secondary.',
-      icon: 'music.png',
+      icon: 'arka-school-music-art-classes-kolar.png',
+      alt: "Music and art classes at Arka International School Kolar",
       label: 'Music & Art',
-      image:'music-image.png',
+      image: 'creative-music-art-classes-arka-school-kolar.png',
       color: '#55A802'
     },
     {
       title: 'English Lessons',
       description: 'With a strong english medium foundation, our lessons strengthen reading, writing and communication skills for confident learners.',
-      icon: 'medium.png',
+      icon: 'english-medium-lessons-arka-school-kolar.png',
+      alt: "English lessons at Arka School to build language skills",
       label: 'English Lessons',
-      image:'medium-image.png',
+      image: 'language-learning-english-class-arka-school-kolar.png',
       color: '#2996BD'
     }
   ];
@@ -118,7 +126,6 @@ export class Home implements AfterViewInit {
       answer: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since Lorem Ipsum is simply dummy text.',
       open: false
     }
-    
   ];
   toggle(index: number) {
     this.faqs.forEach((faq, i) => {
@@ -131,30 +138,38 @@ export class Home implements AfterViewInit {
     {
       title: 'Pre-Primary',
       description: 'A joyful start to learning where children explore through play, stories, and activities. With caring teachers and engaging classrooms, every child builds confidence, creativity and early skills in a safe environment.',
-      image: 'children.png',
+      image: 'indoor-group-activity-arka-school-kolar.png',
       color: '#e63946',
-      bgImage:'group-image.png'
+      bgImage: 'teachers-students-arka-international-school-kolar.png',
+      alt: "Pre-primary kids at Arka School Kolar exploring joyful learning",
+      alt1: "Teachers guiding young learners at Arka International School Kolar"
     },
     {
       title: 'Primary',
-      image: 'children.png',
+      image: 'indoor-group-activity-arka-school-kolar.png',
       color: '#f77f00',
-      bgImage:'group-image.png',
-      description:'Our primary program blends academics with values. Children learn through hands-on lessons, teamwork, and smart class tools - building curiosity, responsibility, and a love for learning.'
+      bgImage: 'teachers-students-arka-international-school-kolar.png',
+      alt: "Primary students learning through activities at Arka School Kolar",
+      alt1: "Smart class and group learning at Arka International School Kolar",
+      description: 'Our primary program blends academics with values. Children learn through hands-on lessons, teamwork, and smart class tools - building curiosity, responsibility, and a love for learning.'
     },
     {
       title: 'Higher Primary',
-      image: 'children.png',
+      image: 'indoor-group-activity-arka-school-kolar.png',
       color: '#fcbf49',
-      bgImage:'group-image.png',
-      description:'At this stage, students gain deeper understanding, better focus and stronger communication. We encourage independent thinking and balanced learning through projects, discussions and real-world application.'
+      bgImage: 'teachers-students-arka-international-school-kolar.png',
+      alt: "Higher primary students doing teamwork at Arka School Kolar",
+      alt1: "Teachers encouraging active learning at Arka School Kolar",
+      description: 'At this stage, students gain deeper understanding, better focus and stronger communication. We encourage independent thinking and balanced learning through projects, discussions and real-world application.'
     },
     {
       title: 'Secondary',
-      image: 'children.png',
+      image: 'indoor-group-activity-arka-school-kolar.png',
       color: '#aacc00',
-      bgImage:'group-image.png',
-      description:'Here, students prepare for the future with structured academics, self-discipline, and life skills. Through regular assessments and leadership exposure, they develop clarity, confidence, and readiness for the next step.'
+      bgImage: 'teachers-students-arka-international-school-kolar.png',
+      alt: "Secondary students focused on academics at Arka School Kolar",
+      alt1: "Arka School students gaining life skills and discipline at Kolar",
+      description: 'Here, students prepare for the future with structured academics, self-discipline, and life skills. Through regular assessments and leadership exposure, they develop clarity, confidence, and readiness for the next step.'
     }
   ];
   showAll = false;
@@ -195,15 +210,22 @@ export class Home implements AfterViewInit {
       duration: 1000, // duration of animation in ms
       once: false
     });
+
+    this.titleService.setTitle('Arka International School - Best English Medium School in Kolar');
+
+    this.metaService.updateTag({
+      name: 'description',
+      content: 'Top English medium school in Kolar with pre-primary to secondary classes, smart class and co-curricular activities.'
+    });
   }
   hoveredIndex: number | null = null;
 
-  
+
   setHoveredCard(index: number): void {
     this.hoveredIndex = index;
     this.activeIndex = null; // clear click when hovered
   }
-  
+
   clearHoveredCard(): void {
     this.hoveredIndex = null;
   }

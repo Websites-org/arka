@@ -17,6 +17,19 @@
   font-weight: 700;
   line-height: 60px; /* 125% */
 }
+
+.heading_h1{
+  color: #FFE200;
+  font-family: "Golos Text";
+  font-size: 58px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  margin-bottom: 1rem;
+  margin-top: 5%;
+  text-align: center;
+}
+
 .infrastructure-section {
   display: flex;
   flex-wrap: wrap;

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import * as AOS from 'aos';
 import { NgForm } from '@angular/forms';
@@ -17,40 +18,49 @@ export class Admission {
       duration: 1000, // duration of animation in ms
       once: false
     });
+
+    this.titleService.setTitle('Admissions Open | Best Pre to Secondary School Kolar');
+
+    this.metaService.updateTag({
+      name: 'description',
+      content: 'Join Kolar’s best English medium school offering pre-primary to secondary with smart class and holistic learning.'
+    });
   }
   onSubmit(form: NgForm) {
     if (form.valid) {
 
       const formData = form.value;
-      
-    const templateParams = {
-      name: formData.name,
-      email: formData.email,
-      phone: formData.phone,
-      message: formData.message,
-      class: formData.class,
-    };
 
-    emailjs.send(
-      'service_l34uerj',      // Replace with your actual Service ID
-      'template_86jsg7n',     // Replace with your actual Template ID
-      templateParams,
-      'mij8_nCeNG8KjT3C_'       // Replace with your actual public key
-    ).then(
-      (response) => {
-        console.log('SUCCESS!', response.status, response.text);
-        alert('Thank you! We will reach you shortly.');
-        form.reset(); // Reset the form after successful submission
-      },
-      (err) => {
-        console.error('FAILED...', err);
-        alert('Oops! Something went wrong. Please try again.');
-      }
-    );
+      const templateParams = {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+        class: formData.class,
+      };
+
+      emailjs.send(
+        'service_l34uerj',      // Replace with your actual Service ID
+        'template_86jsg7n',     // Replace with your actual Template ID
+        templateParams,
+        'mij8_nCeNG8KjT3C_'       // Replace with your actual public key
+      ).then(
+        (response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          alert('Thank you! We will reach you shortly.');
+          form.reset(); // Reset the form after successful submission
+        },
+        (err) => {
+          console.error('FAILED...', err);
+          alert('Oops! Something went wrong. Please try again.');
+        }
+      );
       console.log('Form Submitted ✅', form.value);
       // You can send data to server here
     } else {
       console.log('Form Invalid ❌');
     }
   }
+  constructor(private titleService: Title, private metaService: Meta) { }
+
 }
