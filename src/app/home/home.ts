@@ -107,23 +107,28 @@ export class Home implements AfterViewInit {
   ];
   faqs = [
     {
-      question: 'Arka international school where located in bangalore ?',
-      answer: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s...',
+      question: 'What grades are offered at Arka International School?',
+      answer: 'We offer a complete learning journey from pre-primary to secondary levels. This includes nursery class, primary, and higher primary stages - all designed to support your child’s growth academically and emotionally.',
       open: true
     },
     {
-      question: 'Arka international school where located in bangalore ?',
-      answer: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry ’s standard dummy text ever since Lorem Ipsum is simply dummy text.',
+      question: 'Is Arka International School an English medium institution?',
+      answer: 'Yes. We are proud to be a top English medium school in Kolar, offering high-quality education with a focus on clear communication, strong literacy skills, and conceptual understanding at every level.',
       open: false
     },
     {
-      question: 'Arka international school where located in bangalore ?',
-      answer: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since Lorem Ipsum is simply dummy text.',
+      question: 'What makes Arka one of the best schools in Kolar?',
+      answer: 'At Arka, we combine strong academics with values, creativity, and care. Our experienced teachers, interactive smart classes, engaging classroom activities, and balanced learning environment make us a preferred choice for parents in Kolar.',
       open: false
     },
     {
-      question: 'Arka international school where located in bangalore ?',
-      answer: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since Lorem Ipsum is simply dummy text.',
+      question: 'What co-curricular activities are offered?',
+      answer: 'We believe in holistic education. Students are encouraged to participate in karate, dance, Scout & Guide, and art & craft, helping them build confidence, discipline, and creativity outside the academic space.',
+      open: false
+    },
+    {
+      question: 'How can I get admission for my child at Arka School?',
+      answer: 'Getting started is easy! Simply fill out the admission enquiry form on our website or reach out to us directly. Our team will guide you through the steps and answer all your questions.',
       open: false
     }
   ];
@@ -146,27 +151,27 @@ export class Home implements AfterViewInit {
     },
     {
       title: 'Primary',
-      image: 'indoor-group-activity-arka-school-kolar.png',
+      image: 'arka-international-school.png',
       color: '#f77f00',
-      bgImage: 'teachers-students-arka-international-school-kolar.png',
+      bgImage: 'arka-international-school.png',
       alt: "Primary students learning through activities at Arka School Kolar",
       alt1: "Smart class and group learning at Arka International School Kolar",
       description: 'Our primary program blends academics with values. Children learn through hands-on lessons, teamwork, and smart class tools - building curiosity, responsibility, and a love for learning.'
     },
     {
       title: 'Higher Primary',
-      image: 'indoor-group-activity-arka-school-kolar.png',
+      image: 'best-school-in-kolar.png',
       color: '#fcbf49',
-      bgImage: 'teachers-students-arka-international-school-kolar.png',
+      bgImage: 'best-school-in-kolar.png',
       alt: "Higher primary students doing teamwork at Arka School Kolar",
       alt1: "Teachers encouraging active learning at Arka School Kolar",
       description: 'At this stage, students gain deeper understanding, better focus and stronger communication. We encourage independent thinking and balanced learning through projects, discussions and real-world application.'
     },
     {
       title: 'Secondary',
-      image: 'indoor-group-activity-arka-school-kolar.png',
+      image: 'secondary-school.png',
       color: '#aacc00',
-      bgImage: 'teachers-students-arka-international-school-kolar.png',
+      bgImage: 'secondary-school.png',
       alt: "Secondary students focused on academics at Arka School Kolar",
       alt1: "Arka School students gaining life skills and discipline at Kolar",
       description: 'Here, students prepare for the future with structured academics, self-discipline, and life skills. Through regular assessments and leadership exposure, they develop clarity, confidence, and readiness for the next step.'

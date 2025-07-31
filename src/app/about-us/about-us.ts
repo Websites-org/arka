@@ -36,162 +36,162 @@ export class AboutUs {
     },
     { 
       name: 'Mrs. Vanjakshi', 
-      designation: 'PGT', 
+      designation: 'Post Graduate Teacher', 
       qualification: 'MA, B.Ed', 
       category: 'Secondary', 
       image: '/vanjakshi-pgt-arka-school-kolar.jpg',
-      alt : "Mrs. Vanjakshi, PGT at Arka International School Kolar"
+      alt : "Mrs. Vanjakshi, Post Graduate Teacher at Arka International School Kolar"
     },
     { 
       name: 'Mrs. Hamsaveni', 
-      designation: 'PGT', 
+      designation: 'Post Graduate Teacher', 
       qualification: 'MA, B.Ed', 
       category: 'Secondary', 
       image: '/hamsaveni-pgt-arka-school-kolar.jpg',
-      alt : "Mrs. Hamsaveni, PGT at Arka International School Kolar"
+      alt : "Mrs. Hamsaveni, Post Graduate Teacher at Arka International School Kolar"
     },
     { 
       name: 'Ms. Bharathi B R', 
-      esignation: 'PGT', 
+      esignation: 'Post Graduate Teacher', 
       qualification: 'MA, B.Ed', 
       category: 'Secondary', 
       image: '/bharathi-pgt-arka-school-kolar.jpg',
-      alt : "Ms. Bharathi B R, PGT at Arka International School Kolar"
+      alt : "Ms. Bharathi B R, Post Graduate Teacher at Arka International School Kolar"
     },
     { 
       name: 'Mrs. Dhanvini B K', 
-      designation: 'PGT', 
+      designation: 'Post Graduate Teacher', 
       qualification: 'M.Sc, B.Ed', 
       category: 'Secondary', 
       image: '/dhanvini-pgt-arka-school-kolar.jpeg',
-      alt : "Mrs. Dhanvini B K, PGT at Arka International School Kolar"
+      alt : "Mrs. Dhanvini B K, Post Graduate Teacher at Arka International School Kolar"
     },
     { 
       name: 'Mrs. Nagaveni', 
-      designation: 'TGT', 
+      designation: 'Trained Graduate Teacher', 
       qualification: 'B.A, D.Ed', 
       category: 'Higher Primary', 
       image: '/nagaveni-tgt-arka-school-kolar.jpg',
-      alt : "Mrs. Nagaveni, TGT at Arka International School Kolar"
+      alt : "Mrs. Nagaveni, Trained Graduate Teacher at Arka International School Kolar"
     },
     { name: 'Mr. G K Syed', 
-      designation: 'TGT', 
+      designation: 'Trained Graduate Teacher', 
       qualification: 'B.A, B.Ed', 
       category: 'Higher Primary', 
       image: '/gk-syed-tgt-arka-school-kolar.jpg',
-      alt : "Mr. G K Syed, TGT at Arka International School Kolar"
+      alt : "Mr. G K Syed, Trained Graduate Teacher at Arka International School Kolar"
     },
     { 
       name: 'Mrs. Bindushree', 
-      designation: 'TGT', 
+      designation: 'Trained Graduate Teacher', 
       qualification: 'B.E, B.Ed', 
       category: 'Higher Primary', 
       image: '/bindushree-tgt-arka-school-kolar.jpg',
-      alt : "	Mrs. Bindushree, TGT at Arka International School Kolar"
+      alt : "	Mrs. Bindushree, Trained Graduate Teacher at Arka International School Kolar"
     },
     { 
       name: 'Mrs. Nandini', 
-      designation: 'TGT', 
+      designation: 'Trained Graduate Teacher', 
       qualification: 'B.A, B.Ed', 
       category: 'Higher Primary', 
       image: '/nandini-tgt-arka-school-kolar.jpg',
-      alt : "Mrs. Nandini, TGT at Arka International School Kolar" 
+      alt : "Mrs. Nandini, Trained Graduate Teacher at Arka International School Kolar" 
     },
     { 
       name: 'Mrs. Parvathamma', 
-      designation: 'TGT', 
+      designation: 'Trained Graduate Teacher', 
       qualification: 'B.A, B.Ed', 
       category: 'Higher Primary', 
       image: '/parvathamma-tgt-arka-school-kolar.jpg',
-      alt : "Mrs. Parvathamma, TGT at Arka International School Kolar" 
+      alt : "Mrs. Parvathamma, Trained Graduate Teacher at Arka International School Kolar" 
     },
     { 
       name: 'Mrs. Radha C N', 
-      designation: 'TGT', 
+      designation: 'Trained Graduate Teacher', 
       qualification: 'B.A, B.Ed', 
       category: 'Higher Primary', 
       image: '/radha-physical-teacher-arka-school-kolar.jpeg',
-      alt : "Mrs. Radha C N, TGT at Arka International School Kolar" 
+      alt : "Mrs. Radha C N, Trained Graduate Teacher at Arka International School Kolar" 
     },
     { 
       name: 'Mrs. Kalpana K', 
-      designation: 'TGT', 
+      designation: 'Trained Graduate Teacher', 
       qualification: 'B.A, B.Ed', 
       category: 'Higher Primary', 
       image: '/kalpana-k-tgt-arka-school-kolar.jpeg',
-      alt : "Mrs. Kalpana K, TGT at Arka International School Kolar" 
+      alt : "Mrs. Kalpana K, Trained Graduate Teacher at Arka International School Kolar" 
     },
     { 
       name: 'Mrs. Rekha', 
-      designation: 'PRT', 
+      designation: 'Primary Teacher', 
       qualification: 'D.Ed', 
       category: 'Primary', 
       image: '/rekha-prt-arka-school-kolar.jpeg',
-      alt : "Mrs. Rekha, PRT at Arka International School Kolar" 
+      alt : "Mrs. Rekha, Primary Teacher at Arka International School Kolar" 
     },
     { 
       name: 'Ms. Usha M', 
-      designation: 'PRT', 
+      designation: 'Primary Teacher', 
       qualification: 'B.Sc, MA', 
       category: 'Primary', 
       image: '/usha-m-prt-arka-school-kolar.jpeg',
-      alt : "Ms. Usha M, PRT at Arka International School Kolar" 
+      alt : "Ms. Usha M, Primary Teacher at Arka International School Kolar" 
     },
     { 
       name: 'Ms. Arbia Fathima', 
-      designation: 'PRT', 
+      designation: 'Primary Teacher', 
       qualification: 'B.Com', 
       category: 'Primary', 
       image: '/arbia-fathima-prt-arka-school-kolar.jpeg',
-      alt : "Ms. Arbia Fathima, PRT at Arka International School Kolar" 
+      alt : "Ms. Arbia Fathima, Primary Teacher at Arka International School Kolar" 
     },
     { 
       name: 'Mrs. Madhu Singh', 
-      designation: 'PGT', 
+      designation: 'Post Graduate Teacher', 
       qualification: 'M.Sc', 
       category: 'Secondary', 
       image: '/madhu-singh-pgt-arka-school-kolar.jpg',
-      alt : "Mrs. Madhu Singh, PGT at Arka International School Kolar" 
+      alt : "Mrs. Madhu Singh, Post Graduate Teacher at Arka International School Kolar" 
     },
     { 
       name: 'Ms. Rini Priyanka S', 
-      designation: 'PRT', 
+      designation: 'Primary Teacher', 
       qualification: 'MTT', 
       category: 'Primary', 
       image: '/rini-priyanka-prt-arka-school-kolar.jpeg',
-      alt : "Ms. Rini Priyanka S, PRT at Arka International School Kolar" 
+      alt : "Ms. Rini Priyanka S, Primary Teacher at Arka International School Kolar" 
     },
     { 
       name: 'Ms. Monica M', 
-      designation: 'PRT', 
+      designation: 'Primary Teacher', 
       qualification: 'MTT', 
       category: 'Primary', 
       image: '/monica-m-prt-arka-school-kolar.jpeg',
-      alt : "Ms. Monica M, PRT at Arka International School Kolar" 
+      alt : "Ms. Monica M, Primary Teacher at Arka International School Kolar" 
     },
     { 
       name: 'Mr. Navichandran', 
-      designation: 'PGT', 
+      designation: 'Post Graduate Teacher', 
       qualification: 'M.Sc', 
       category: 'Secondary', 
       image: '/navichandran-pgt-arka-school-kolar.jpeg',
-      alt : "Mr. Navichandran, PGT at Arka International School Kolar" 
+      alt : "Mr. Navichandran, Post Graduate Teacher at Arka International School Kolar" 
     },
     { 
       name: 'Ms. Shalini A', 
-      designation: 'PRT', 
+      designation: 'Primary Teacher', 
       qualification: 'MTT', 
       category: 'Primary', 
       image: '/shalini-a-prt-arka-school-kolar.jpeg',
-      alt : "Ms. Shalini A, PRT at Arka International School Kolar" 
+      alt : "Ms. Shalini A, Primary Teacher at Arka International School Kolar" 
     },
     { 
       name: 'Ms. Suganya P', 
-      designation: 'PRT', 
+      designation: 'Primary Teacher', 
       qualification: 'NTT', 
       category: 'Primary', 
       image: '/suganya-p-prt-arka-school-kolar.jpg',
-      alt : "Ms. Suganya P, PRT at Arka International School Kolar" 
+      alt : "Ms. Suganya P, Primary Teacher at Arka International School Kolar" 
     },
     { 
       name: 'Mr. Nagesh', 

@@ -1,5 +1,5 @@
 <div class="contact-wrapper">
-    <div class="contact-left">
+    <div class="contact-left" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
       <h1>Get in touch with us</h1>
       <p>
         Have questions about school admissions, curriculum, or everyday school life? We're happy to help.
@@ -7,20 +7,20 @@
         our classrooms and activities, we believe the first step to great education is open communication.
       </p>
   
-      <div class="contact-info">
-        <div class="info-box">
+      <div class="contact-info" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
+        <div class="info-box" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
           <h3>Write us</h3>
           <p>Only friendly team is here to help</p>
           <strong><a style="color: #000; text-decoration: none;" href="mailto:arkakolar@gmail.com">arkakolar&#64;gmail.com</a></strong>
         </div>
   
-        <div class="info-box">
+        <div class="info-box" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
           <h3>Call us</h3>
           <p>Toll free call</p>
           <strong><a style="color: #000; text-decoration: none;" href="tel:+916366664665">6366664665</a> / <a style="color: #000; text-decoration: none;" href="tel:+916366663664">6366663664</a></strong>
         </div>
   
-        <div class="info-box">
+        <div class="info-box" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
           <h3>School Timings</h3>
          <!-- <strong>School Timings</strong> -->
          <strong class="timings">
@@ -28,7 +28,7 @@
           Saturday - 9:15 AM to 12:15 PM</strong>
         </div>
   
-        <div class="info-box">
+        <div class="info-box" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
           <h3>Visit us</h3>
           <p>Come Say Hello to Our School</p>
           <strong class="address">
@@ -39,7 +39,7 @@
       </div>
     </div>
   
-    <div class="contact-form">
+    <div class="contact-form" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
       <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" novalidate>
         <div class="input-row">
           <input
@@ -60,15 +60,10 @@
         type="text"
         name="lastname"
         placeholder="Last name"
-        required
         ngModel
         #lastname="ngModel"
         pattern="^[a-zA-Z ]{1,30}$"
       />
-      <div class="error" *ngIf="lastname.invalid && lastname.touched">
-        <small *ngIf="lastname.errors?.['required']">Name is required.</small>
-        <small *ngIf="lastname.errors?.['pattern']">Enter a valid lastname (2–30 letters).</small>
-      </div>
 
         </div>
         <div class="input-row">
@@ -111,7 +106,7 @@
     </div>
   </div>
 
-  <div class="map-container">
+  <div class="map-container" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4174.050496221547!2d78.07569807533402!3d13.120614211593177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3badfbc61a95e95d%3A0xba180465fb48e8f1!2sARKA%20INTERNATIONAL%20SCHOOL!5e1!3m2!1sen!2sin!4v1752484695340!5m2!1sen!2sin"
       width="600"

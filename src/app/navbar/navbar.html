@@ -1,32 +1,48 @@
 <header class="navbar">
-    <div class="logo">
-      <img src="/arka-international-school-logo-in-kolar-karnataka.svg" alt="Arka International School logo in Kolar Karnataka" />
+  <div class="logo">
+    <img src="/arka-international-school-logo-in-kolar-karnataka.svg"
+      alt="Arka International School logo in Kolar Karnataka" />
+  </div>
+
+
+  <div class="menu-toggle" (click)="menuOpen = !menuOpen">
+    <i class="fas" [ngClass]="menuOpen ? 'fa-times' : 'fa-bars'"></i>
+  </div>
+
+  <nav [class.active]="menuOpen" class="nav-container">
+    <div class="nav-links">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+        (click)="closeMenu()">Home</a>
+      <a routerLink="/about-us" routerLinkActive="active" (click)="closeMenu()">About Us</a>
+      <a routerLink="/curriculum" routerLinkActive="active" (click)="closeMenu()">Curriculum</a>
+      <a routerLink="/admission" routerLinkActive="active" (click)="closeMenu()">Admission</a>
+      <a routerLink="/facility" routerLinkActive="active" (click)="closeMenu()">Facilities</a>
+      <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact Us</a>
+      <a routerLink="/mandatory-public-disclosure" routerLinkActive="active" (click)="closeMenu()">Mandatory 
+        Disclosure</a>
+
     </div>
 
-      
-    <div class="menu-toggle" (click)="menuOpen = !menuOpen">
-        <i class="fas" [ngClass]="menuOpen ? 'fa-times' : 'fa-bars'"></i>
-      </div>
-  
-    <nav [class.active]="menuOpen" class="nav-container">
-        <div class="nav-links">
-            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Home</a>
-            <a routerLink="/about-us" routerLinkActive="active" (click)="closeMenu()">About Us</a>
-            <a routerLink="/curriculum" routerLinkActive="active" (click)="closeMenu()">Curriculum</a>
-            <a routerLink="/admission" routerLinkActive="active" (click)="closeMenu()">Admission</a>
-            <a routerLink="/facility" routerLinkActive="active" (click)="closeMenu()">Facilities</a>
-            <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact Us</a>
-
-        </div>
-
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-twitter"></i></a>
+    <div class="social-icons">
+      <!-- <a href="#"><i class="fab fa-twitter"></i></a>
         <a href="https://www.facebook.com/share/1Au4VHPWen/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
         <a href="https://www.instagram.com/arka_school_kolar?igsh=czNlNWxsbXp4bTQ3"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
-      </div>
-    </nav>
-  
+        <a href="#"><i class="fab fa-youtube"></i></a> -->
+      <button class="apply-button" [routerLink]="'/admission'">
+        <span>
+        Apply Now
 
-  </header>
-  
+        <span class="arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12" fill="none">
+            <path d="M2 6L14 6M14 6L9.5 10.5M14 6L9.5 1.5" stroke="white" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </span>
+      </span>
+</button>
+
+    </div>
+  </nav>
+
+
+</header>

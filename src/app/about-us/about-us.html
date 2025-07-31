@@ -1,20 +1,25 @@
-<div class="about-school"  data-aos="slide-up" data-aos-duration="1200" data-aos-delay="300">
-    <h1 class="section-title" style="text-align: center;">ABOUT ARKA INTERNATIONAL SCHOOL</h1>
-    <p class="staff-description">
+<div class="banner-section">
+    <div class="banner-content">
+        <h2>A learning community built on values, care and growth.</h2>
+      </div>
+</div>
+<div class="about-school">
+    <h1 class="section-title" style="text-align: center;" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">ABOUT ARKA INTERNATIONAL SCHOOL</h1>
+    <p class="staff-description" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
         Jnanambika Educational Trust is founded by Dr Venugopal in to nurture young minds, retain their creative talents and at the 2018, the Trust has a vision to drive Arka International School, same time chisel every child to be competent, and happy to serve the national goals. With more than 40+ years of rich experience in different government as well as private academic institutions, Dr. Venugopal has embarked upon a journey to create and sustain Jnanambika Trust which would result in the advent of Arka International School near Kolar, to provide best service in the field of education. With a subtle blend of the modern and the traditional, Arka International School will be a different school that would adopt Play Way method and DIY tools (Do It Yourself). Sustaining the creative best in every child, Arka would build life-skills, scientific approach and lateral thinking skills in every child by making <a href="https://en.wikipedia.org/wiki/Learning" target="_blank">learning</a> a fun activity
         Jnanambika Educational trust is committed to provide high quality learning experience to every child by adopting time tested tactics, customized learning strategies based on the learning abilities of a child, with inputs from highly qualified teachers, well provided infrastructure and highly evolved <a href="https://en.wikipedia.org/wiki/Library">Library</a> and ICT services. Arka International School as an international school in its standards and would draw lessons from Indian wisdom in the field of education. </p> 
           
     </div>
-    <div class="scrolling-image-container" *ngIf="showImages">
+    <div class="scrolling-image-container" *ngIf="showImages"  data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
         <div class="scrolling-track">
             <img src="/group-activities-students-arka-school-kolar.svg" alt="Group activities at Arka International School Kolar" class="scrolling-image" />
             <img src="/group-activities-students-arka-school-kolar.svg" alt="Students engaging in fun group sessions at Arka School Kolar" class="scrolling-image" />
         </div>
       </div>  
 <div class="about-us-container">
-    <h2 class="section-title">A Message from the Principal: Our School Curriculum</h2>
+    <h2 class="section-title" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">A Message from the Principal: Our School Curriculum</h2>
   
-    <div class="about-content">
+    <div class="about-content" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
       <div class="about-text">
         <p class="heading"><strong>Dear Parents, Students, and Community Members,</strong></p>
         <p>
@@ -29,9 +34,12 @@
         <p>
           We emphasize critical thinking, creativity, and collaboration — skills that will serve our students well in an ever-changing world. Our teachers regularly participate in professional development to ensure they are using the most effective, research-based teaching strategies.
         </p>
+        <p>
+            We are committed to meeting each student where they are and helping them reach their full potential. Our curriculum includes support for students who need additional help as well as enrichment opportunities for those ready for greater challenges.
+          </p>
       </div>
   
-      <div class="about-image">
+      <div class="about-image" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
         <img src="keerthy-principal-arka-international-school-kolar.svg" alt="Principal" class="principal-photo" />
         <div class="caption-wrapper">
           <div class="caption-shadow"></div>
@@ -42,18 +50,15 @@
       </div>
       
       
-      <div class="about-text-remaining">
+      <div class="about-text-remaining" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
+        <p><strong class="link-text"># Partnership with Families</strong></p>
         <p>
-            We are committed to meeting each student where they are and helping them reach their full potential. Our curriculum includes support for students who need additional help as well as enrichment opportunities for those ready for greater challenges.
-          </p>
-          <p><strong class="link-text"># Partnership with Families</strong></p>
-          <p>
-            Your involvement in your child’s education is invaluable. We encourage you to ask your children about what they’re learning, support their homework efforts, and maintain open communication with their teachers. Together, we can ensure every student has the opportunity to thrive.
-          </p>
+          Your involvement in your child’s education is invaluable. We encourage you to ask your children about what they’re learning, support their homework efforts, and maintain open communication with their teachers. Together, we can ensure every student has the opportunity to thrive.
+        </p>
       </div>
     </div>
   
-    <div class="about-quote">
+    <div class="about-quote" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
       “The future belongs to those who believe in the beauty of their dreams.”<br />
       <span class="quote-author">– Eleanor Roosevelt</span>
     </div>
@@ -117,12 +122,9 @@
     </div>
   </section> -->
   <section class="leadership-section">
-    <div class="left-panel">
-      <div class="label">LEADERSHIP</div>
-      <h2>Our senior<br />leadership team</h2>
-      <a href="#" class="faculty-link">
-        <span>↗</span> Meet the faculty
-      </a>
+    <div class="left-panel" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
+      <div class="label">OUR TEAM</div>
+      <h2>Our Principal <br />& Experienced Faculty</h2>
     </div>
   
     <div class="right-panel">
@@ -130,8 +132,8 @@
         <div class="staff-card" *ngFor="let staff of staffList">
           <img [src]="staff.image" alt="{{ staff.name }}" />
           <h3>{{ staff.name }}</h3>
-          <p>{{ staff.designation }}</p>
           <p>{{staff.qualification}}</p>
+          <p>{{ staff.designation }}</p>
         </div>
       </div>
     </div>

@@ -5,6 +5,7 @@ import { Home } from './home/home';
 import { Admission } from './admission/admission';
 import { Facility } from './facility/facility';
 import { AboutUs } from './about-us/about-us';
+import { Mpd } from './mpd/mpd';
 
 export const routes: Routes = [
         { path: '', component: Home },
@@ -13,6 +14,7 @@ export const routes: Routes = [
         { path: 'admission', component: Admission },
         { path: 'facility', component: Facility },
         { path: 'about-us', component: AboutUs }, // Assuming Home is used for About Us as well
+        { path:'mandatory-public-disclosure', component: Mpd},
         { path: '**', redirectTo: '' }
 
 ];

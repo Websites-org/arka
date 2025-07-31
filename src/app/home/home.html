@@ -21,38 +21,39 @@
       </div>
 
       <div class="right-banner">
-        <img src="arka-international-school-student-kolar..svg" alt="Student of Arka International School Kolar with backpack" />
+        <img src="arka-international-school-student-kolar..svg" alt="Student of Arka International School Kolar with backpack" data-aos-duration="1200" data-aos-delay="300"/>
       </div>
     </div>
   </div>
 
   <section class="about-arka" #aboutSection>
-    <div class="image-arc">
+    <div class="image-arc" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
       <!-- Left arc images -->
-      <img src="classroom-learning-arka-school-kolar.png" class="arc-img left-curve top" alt="Students at Arka School Kolar enjoying classroom learning">
-      <img src="arka-school-kids-smart-class-kolar.png" class="arc-img left-curve mid" alt="Arka International School kids with toys in smart class">
-      <img src="activity-time-arka-international-school-kolar.png" class="arc-img left-curve bottom" alt="Activity time at Arka International School Kolar">
+      <img src="classroom-learning-arka-school-kolar.png" class="arc-img left-curve top" alt="Students at Arka School Kolar enjoying classroom learning" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
+      <img src="arka-school-kids-smart-class-kolar.png" class="arc-img left-curve mid" alt="Arka International School kids with toys in smart class" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="700">
+      <img src="activity-time-arka-international-school-kolar.png" class="arc-img left-curve bottom" alt="Activity time at Arka International School Kolar" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
 
       <!-- Right arc images -->
-      <img src="outdoor-activities-arka-international-school-kolar.png" class="arc-img right-curve top" alt="Outdoor activities at Arka International School Kolar">
-      <img src="student-growth-activity-arka-school-kolar.png" class="arc-img right-curve mid" alt="Students measuring growth at Arka School Kolar">
-      <img src="stage-activity-arka-international-school-kolar.png" class="arc-img right-curve bottom" alt="Stage activity at Arka International School Kolar">
+      <img src="outdoor-activities-arka-international-school-kolar.png" class="arc-img right-curve top" alt="Outdoor activities at Arka International School Kolar" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
+      <img src="student-growth-activity-arka-school-kolar.png" class="arc-img right-curve mid" alt="Students measuring growth at Arka School Kolar" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="700">
+      <img src="stage-activity-arka-international-school-kolar.png" class="arc-img right-curve bottom" alt="Stage activity at Arka International School Kolar" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
     </div>
 
     <div class="about-text">
-      <h1>Best International School in Kolar, Bangalore</h1>
-      <p>
+      <h1  data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">ABOUT ARKA INTERNATIONAL SCHOOL</h1>
+      <p data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
         Jnanambika Educational Trust is founded by Dr. Venugopal in 2018. The Trust has a vision to drive Arka
         International School, to nurture young minds, retain their creative talents and at the same time ...
       </p>
-      <a routerLink="/about-us" class="learn-more">Learn More</a>
+      <a data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300" routerLink="/about-us" class="learn-more">Learn More</a>
     </div>
   </section>
   <div class="edu-accordion-wrapper">
     <!-- Left Section -->
     <div class="edu-intro">
-      <h2>Empowering Young Minds, Every Step of the Way</h2>
-      <p>
+      <h2 data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">Empowering Young Minds, Every Step of the Way
+      </h2>
+      <p data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
         We believe that education is more than just academics - it's about helping every child grow with confidence,
         creativity and care. From their very first day in pre-primary to their final years in secondary, <a href="https://en.wikipedia.org/wiki/Student" target="_blank">students</a> at
         Arka experience joyful learning, meaningful classroom connections and the guidance of experienced
@@ -62,9 +63,10 @@
 
     <!-- Accordion Cards -->
     <div class="edu-accordion">
-      <div class="edu-card" *ngFor="let stage of stages; let i = index" [class.active]="i === activeIndex || i === hoveredIndex"
-        (click)="setActiveCard(i)"   (mouseenter)="setHoveredCard(i)"
-        (mouseleave)="clearHoveredCard()" [ngStyle]="{ '--card-color': stage.color }">
+      <div class="edu-card" *ngFor="let stage of stages; let i = index"
+        [class.active]="i === activeIndex || i === hoveredIndex" (click)="setActiveCard(i)"
+        (mouseenter)="setHoveredCard(i)" (mouseleave)="clearHoveredCard()" [ngStyle]="{ '--card-color': stage.color }"
+        >
         <ng-container *ngIf="i === activeIndex || i === hoveredIndex; else closedCard">
           <div class="color-bar"></div>
           <img [src]="stage.image" class="opened-image" [alt]="stage.alt" />
@@ -77,7 +79,7 @@
         <ng-template #closedCard>
           <div class="card-background" [ngStyle]="{
             'background-image':
-              'linear-gradient(180deg, rgba(255,255,255,0.8) 0%, rgba(0,68,124,0.8) 100%), url(' + stage.image + ')'
+              'linear-gradient(180deg, rgba(255,255,255,0.8) 0%, rgba(0,68,124,0.8) 100%), url(' + stage.bgImage + ')'
           }">
             <div class="color-bar"></div>
             <div class="card-bottom">
@@ -88,20 +90,21 @@
         </ng-template>
       </div>
       <div class="mobile-accordion">
-        <div class="accordion-card-mobile" *ngFor="let stage of stages; let i = index" [class.open]="activeIndex === i"         (click)="setActiveCard(i)" [ngStyle]="{ '--card-color': stage.color }">
+        <div class="accordion-card-mobile" *ngFor="let stage of stages; let i = index" [class.open]="activeIndex === i"
+          (click)="setActiveCard(i)" [ngStyle]="{ '--card-color': stage.color }" >
           <ng-container *ngIf="i === activeIndex; else closedCard">
             <div class="color-bar"></div>
             <img [src]="stage.image" class="opened-image" />
             <div class="opened-content">
               <h3>{{ stage.title }}</h3>
               <p>{{ stage.description }}</p>
-              <button class="know-more">Know More</button>
+              <button class="know-more" [routerLink]="'/curriculum'" >Know More</button>
             </div>
           </ng-container>
           <ng-template #closedCard>
             <div class="card-background" [ngStyle]="{
               'background-image':
-                'linear-gradient(180deg, rgba(255,255,255,0.8) 0%, rgba(0,68,124,0.8) 100%), url(' + stage.image + ')'
+                'linear-gradient(180deg, rgba(255,255,255,0.8) 0%, rgba(0,68,124,0.8) 100%), url(' + stage.bgImage + ')'
             }">
               <div class="color-bar"></div>
               <div class="card-bottom">
@@ -119,46 +122,46 @@
   <div class="mv-wrapper">
     <!-- Left: Mission -->
     <div class="mv-section left">
-      <h2>
+      <h2 data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
         <sup class="mv-our blue">OUR</sup>
         <sub class="mv-title blue">Mission</sub>
       </h2>
-      <ul>
+      <ul data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
         <li *ngFor="let point of getVisiblePoints(); let i = index">
           {{ point }}
         </li>
       </ul>
-      
-      <a href="#" class="read-more" (click)="toggleReadMore($event)">
+
+      <a data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300" href="#" class="read-more" (click)="toggleReadMore($event)">
         {{ showAll ? 'Read Less...' : 'Read More...' }}
       </a>
-      
+
     </div>
 
     <!-- Center Icons -->
-    <div class="mv-icons">
+    <div class="mv-icons" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
       <img src="arka-school-vision-idea-icon-kolar.png" class="puzzle puzzle-blue" alt="Vision icon representing creativity at Arka International School" />
       <img src="arka-school-mission-target-icon-kolar.png" class="puzzle puzzle-red" alt="Mission icon representing goals at Arka International School" />
     </div>
 
     <!-- Right: Vision -->
     <div class="mv-section right">
-      <h2>
+      <h2 data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
         <sup class="mv-our red">OUR</sup>
         <sub class="mv-title red">Vision</sub>
       </h2>
-      <p class="vision-content">
+      <p class="vision-content" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
         To nurture the creative young minds, provide every child the knowledge and competence necessary to lead a happy,
         creative entrepreneurial life and to contribute to the creation of a healthy and prosperous.
       </p>
     </div>
   </div>
   <div class="curriculum-container">
-    <div class="about-text">
-      <h2>CO-CURRICULUM</h2>
+    <div class="curriculum-text">
+      <h2 data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">CO-CURRICULUM</h2>
     </div>
     <div class="card-container">
-      <div class="flip-card" *ngFor="let card of card">
+      <div class="flip-card" *ngFor="let card of card"  data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
         <div class="flip-inner">
           <!-- Front: Blue Text Side -->
           <div class="flip-front" [ngStyle]="{'background-color': card.color}">
@@ -179,25 +182,28 @@
       </div>
     </div>
   </div>
-  <div class="faq-wrapper">
+  <div class="faq-wrapper" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
     <h4>Frequently Asked Questions?</h4>
     <h2 class="school-name">Arka International School</h2>
-    <p class="description">
+    <!-- <p class="description">
       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s
       standard dummy text ever since Lorem Ipsum is simply dummy text.
-    </p>
+    </p> -->
 
     <div class="accordion">
       <div class="accordion-item" *ngFor="let faq of faqs; let i = index">
         <div class="accordion-header" (click)="toggle(i)">
           <span>{{ i + 1 }}. {{ faq.question }}</span>
-          <svg [class.rotate]="faq.open" class="arrow" xmlns="http://www.w3.org/2000/svg" width="34" height="34"
+          <div>
+            <svg [class.rotate]="faq.open" class="arrow" xmlns="http://www.w3.org/2000/svg" width="34" height="34"
             viewBox="0 0 34 34" fill="none">
             <path d="M21.9497 12.05L12.0502 21.9495M21.9497 12.05V20.5353M21.9497 12.05H13.4645" stroke="black"
               stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
+          </div>
         </div>
-        <div #bodyWrapper class="accordion-body-wrapper" [ngClass]="{ open: faq.open }" [style.maxHeight]="faq.open ? bodyHeights[i] + 'px' : '0px'">
+        <div #bodyWrapper class="accordion-body-wrapper" [ngClass]="{ open: faq.open }"
+          [style.maxHeight]="faq.open ? bodyHeights[i] + 'px' : '0px'">
           <div class="accordion-body">
             <p>{{ faq.answer }}</p>
           </div>

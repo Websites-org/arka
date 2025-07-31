@@ -11,6 +11,7 @@
   min-height: 100vh; /* or 100% if inside a scrollable wrapper */
   position: relative; /* required if child elements are absolutely positioned */
   z-index: 0;
+  margin-top: 80px;
 }
 .banner {
   background: #54b6c3;
@@ -202,7 +203,7 @@
   font-style: normal;
   font-weight: 700;
   line-height: 28px; /* 116.667% */
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid red !important;
   padding-bottom: 2px;
 }
 
@@ -225,6 +226,7 @@
   object-fit: cover;
   border-radius: 15px;
   transition: transform 0.4s ease;
+  animation: float 4s ease-in-out infinite;
   /* box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15); */
 }
 
@@ -266,6 +268,33 @@
 .arc-img:hover {
   transform: scale(1.05) rotate(0deg);
 }
+
+.sun {
+  animation: float 3s ease-in-out infinite;
+}
+
+
+.rocket{
+  animation: float 6s ease-in-out infinite;
+}
+
+.left-curve.top { animation-delay: 0s; }
+.left-curve.mid { animation-delay: 1s; }
+.left-curve.bottom { animation-delay: 2s; }
+
+.right-curve.top { animation-delay: 1.5s; }
+.right-curve.mid { animation-delay: 0.5s; }
+.right-curve.bottom { animation-delay: 2.5s; }
+/* Keyframes for floating */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(var(--rotate, 0deg));
+  }
+  50% {
+    transform: translateY(-10px) rotate(var(--rotate, 0deg));
+  }
+}
+
 .learning-section {
   display: flex;
   flex-wrap: wrap;
@@ -384,6 +413,18 @@
   justify-content: center;
   padding: 2rem;
 }
+
+.curriculum-text h2 {
+  color: #0061af;
+  font-family: "Golos Text";
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 40px */
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+}
+
 
 .flip-card {
   background: transparent;
@@ -554,8 +595,8 @@
   border: none;
   border-radius: 50%;
   font-size: 24px;
-  width: 40px;
-  height: 40px;
+  /* width: 40px;
+  height: 40px; */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
   display: flex;
   align-items: center;
@@ -987,6 +1028,12 @@ ul {
   text-align: left;
 }
 
+@media (max-width: 1500px){
+  .mv-wrapper{
+    padding: 2rem 3rem;
+  }
+}
+
 @media (max-width: 1300px) {
   
   .left-curve.top,
@@ -1027,7 +1074,7 @@ ul {
   .banner .sun {
     top: 60%;
     right: 10px;
-    width: 70px;
+    width: 130px;
   }
 
   .banner .clouds {
@@ -1051,10 +1098,11 @@ ul {
     /* flex-direction: column; */
     align-items: center;
     height: auto;
-    padding: 2rem 3rem;
+    padding: 2rem 1rem;
     text-align: center;
     flex-wrap: nowrap;
   }
+
 
   .mv-section.left,
   .mv-section.right {
@@ -1085,6 +1133,14 @@ ul {
     right: 47px;
   }
 }
+
+@media (max-width: 1200px){
+  .mv-wrapper{
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
 @media (max-width: 1024px) {
   .mv-wrapper {
     padding: 2rem 2rem;
@@ -1113,6 +1169,9 @@ ul {
 
   .puzzle {
     width: 200px;
+  }
+  .mv-section {
+    flex: 0;
   }
 }
 
@@ -1228,6 +1287,7 @@ ul {
   }
   .about-arka{
     height: 60vh;
+    padding-bottom: 0;
   }
 
   .about-images {
@@ -1253,7 +1313,7 @@ ul {
   }
 
   .about-text h1 {
-    font-size: 1.8rem;
+    font-size: 28px;
   }
 
   .about-text span {
@@ -1283,8 +1343,8 @@ ul {
   }
 
   .flip-card {
-    width: 90%;
-    font-size: 40px;
+    width: 80%;
+    font-size: 36px;
   }
   .flip-front h3 {
     font-size: 28px;
@@ -1298,8 +1358,8 @@ ul {
   }
 
   .arrow {
-    width: 45px;
-    height: 35px;
+    /* width: 45px;
+    height: 35px; */
     font-size: 0.9rem;
   }
   .mv-wrapper {
@@ -1308,6 +1368,10 @@ ul {
     height: auto;
     padding: 2rem 3rem;
     text-align: center;
+  }
+
+  .mv-section{
+    flex: 0;
   }
 
   .mv-section.left{
@@ -1385,13 +1449,51 @@ ul {
     max-width: 90vw;
     height: auto;
   }
-  .banner-content .left-banner h1{
+
+  .edu-intro h2{
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 28px;
+  }
+
+  .edu-intro p {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 1rem;
+  }
+
+  .banner-content .left-banner .heading{
     font-size: 48px;
+  }
+
+  ul{
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .vision-content {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .curriculum-text h2 {
+    font-size: 28px;
+    margin-bottom: 2rem;
+  }
+  .mv-title {
+    font-size: 38px;
+  }
+  .back-label {
+    font-size: 28px;
+  }
+  .flip-front p {
+    font-size: 16px;
   }
   
 }
 
 @media (max-width: 500px) {
+  .banner-content .left-banner .heading{
+    font-size: 48px;
+  }
   .banner .clouds {
     bottom: -4%;
     left: -100px;

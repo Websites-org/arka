@@ -11,12 +11,13 @@
       rgba(44, 44, 44, 0.4) 88.85%,
       rgba(0, 0, 0, 0.5) 100%
     ),
-    url("/admission-bg.svg") no-repeat center center/cover;
+    url("/admission-bg.png") no-repeat center center/cover;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   padding: 4rem 2rem;
   color: #fff;
+  margin-top: 80px;
 }
 
 .content-wrapper {
@@ -560,7 +561,7 @@
   padding: 4rem;
   gap: 2rem;
   justify-content: center;
-  height: 100vh;
+  height: 105vh;
 }
 
 .contact-left {
@@ -603,7 +604,7 @@
   gap: 42px;
 }
 .contact-left .icon {
-  width: 18px;
+  /* width: 18px; */
   margin-right: 10px;
 }
 .email {
@@ -635,7 +636,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 10px;
+  gap: 20px;
   margin-bottom: 1rem;
   padding: 10px 20px;
 }
@@ -648,7 +649,7 @@
   /* margin: 1rem 0; */
   color: #fff;
   font-family: Poppins;
-  font-size: 20px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -661,18 +662,42 @@
 .error {
   color: red;
   font-size: 0.8rem;
-  margin-top: 0.3rem;
+  margin-top: -0.7rem;
 }
 
 .social-icons {
   display: flex;
-  gap: 1rem;
+  /* gap: 1rem; */
   margin-top: 1rem;
 }
 
-.social-icons a {
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  color: white;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.icon:hover {
+  background-color: orange; /* Or any other color */
+}
+
+.facebook:hover {
+  background-color: #3b5998; /* Facebook brand color or your choice */
+}
+
+.instagram:hover {
+  background-color: orange; /* As shown in your image */
+}
+/* .social-icons a {
   color: white;
   font-size: 1.7rem;
+  width: 64px;
+  height: 64px;
 }
 
 .social-icons a:hover {
@@ -684,7 +709,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
 .contact-right {
   flex: 1 1 50%;
@@ -751,12 +776,15 @@ select {
     border-radius: 30px;
   }
   .initial-row h2 {
-    font-size: 24px;
+    font-size: 20px;
   }
   .text-area ul,
   .text-area p {
     margin-left: 0;
     font-size: 14px;
+  }
+  .age-criteria h2 {
+    font-size: 32px;
   }
 }
 
@@ -788,15 +816,17 @@ select {
   .content-wrapper {
     flex-direction: column;
     text-align: center;
-    padding-top: 4rem;
+    padding-top: 2rem;
     gap: 1.5rem;
   }
   .age-card {
     width: calc(50% - 1rem);
   }
   .text-block .heading {
-    font-size: 28px;
-    line-height: 36px;
+    font-size: 64px;
+    line-height: 72px;
+    text-transform: capitalize;
+
   }
 
   .text-block .heading span,
@@ -863,6 +893,26 @@ select {
   .phone-box:hover {
     width: 100%;
   }
+  .contact-left {
+    gap: 12px;
+  }
+  .information {
+    gap: 12px;
+  }
+  .info-card .bottom-line {
+    width: 100%;
+  }
+  .info-card .text-area h4,
+  .info-card .text-area h2,
+  .info-card .text-area p,
+  .info-card .text-area ul {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .info-card .initial-row {
+    transform: translateY(0px);
+  }
+  
 }
 
 @media (max-width: 600px) {
@@ -871,8 +921,10 @@ select {
     padding: 2rem 1rem;
   }
   .text-block .heading {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 47px;
+    line-height: 50px;
+    text-transform: capitalize;
+
   }
   .text-block .heading span,
   .text-block .heading strong {
@@ -919,11 +971,17 @@ select {
     font-weight: 700;
     line-height: 100%;
   }
+  .contact-left h2 {
+    font-size: 34px;
+  }
+  .document-section h2 {
+    font-size: 30px;
+  }
 }
 
 @media (max-width: 380px) {
   .document-section h2 {
-    font-size: 30px;
+    font-size: 24px;
   }
   .age-card {
     width: 200px;
@@ -993,8 +1051,8 @@ select {
     bottom: 90px;
   }
   .text-block .heading {
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 37px;
+    line-height: 50px;
   }
 
   .text-block .heading span,
@@ -1007,5 +1065,9 @@ select {
 @media (max-width: 330px) {
   .admission-banner {
     height: 82vh;
+  }
+  .text-block .heading {
+    font-size: 30px;
+    line-height: 42px;
   }
 }
